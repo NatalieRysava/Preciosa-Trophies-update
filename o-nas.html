@@ -30,7 +30,7 @@
             loop: false,
             slidesPerView: 1,
             centeredSlides: false,
-            spaceBetween: 80,
+            spaceBetween: -16,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: true,
@@ -59,7 +59,11 @@
     <header class="header header--blue-gradient header--pozadi position--relative">
         <img src="img/pozadi.jpg" alt="" class="photo-background">
         <a href="#onas" class="scroll"><img src="down--white.svg"></a>
-        <p class="text--absolute fade">Zasloužíte si to nejlepší.</p>
+        <div class="text--absolute fade">
+            <h1 class="heading--h2" data-aos="fade-zoom-in" data-aos-duration="1000">Technologie, které k výrobě používáme</h1>
+            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="250">V oblasti sklářství existuje řada inovativních technologií, které umožňují transformovat obyčejné kusy skla do unikátních uměleckých děl a funkčních předmětů. Tyto technologie zahrnují pískování, lepení, hydroglazuru, vodní paprsek, mačkání a broušení. Každá z těchto metod nabízí jedinečné možnosti zpracování skla, od vytváření textur a vzorů přes spojování a modelování až po zdokonalování povrchu a tvaru. Každá technologie přináší do oboru sklářství svůj vlastní kreativní přístup a umožňuje umělcům, designérům a řemeslníkům vyjádřit svou kreativitu a oživit skleněné materiály nevídanými způsoby.</p>
+            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="500">Každá z těchto technologií přináší do oblasti sklářství unikátní možnosti a způsoby zpracování skla pro různé estetické a funkční účely.</p>
+    </div>
         <nav class="nav navbar">
             <div class="navbar__hamburger">
                 <a class="hamburger-menu" href="javascript:void(0)">
@@ -73,10 +77,10 @@
                     <div>
                         <li class="menu__item"><a class="menu__link" href="index.html">Domů</a></li>
                         <li class="menu__item"><a class="menu__link" href="inspirujte-se.html">Inspirujte se</a></li>
-                        <li class="menu__item"><a class="menu__link chosen" href="o-nas.html">O nás</a></li>
+                        <li class="menu__item"><a class="menu__link" href="image-book/image-book-cz.pdf" target="_blank">Katalog</a></li>
                     </div>
                     <div>
-                        <li class="menu__item"><a class="menu__link" href="image-book/image-book-cz.pdf" target="_blank">Image Book</a></li>
+                        <li class="menu__item"><a class="menu__link chosen" href="o-nas.html">O nás</a></li>
                         <li class="menu__item"><a class="menu__link" href="kontakty.html">Kontakty</a></li>
                     </div>
                 </div>
@@ -86,37 +90,17 @@
         <a href="index.html"><h1 class="heading--h1"><span class="heading--vymena">Preciosa</span> Trophies</h1></a>
     </header>
     <main id="onas">
-        <section class="section section--o-nas">
-                <h1 class="heading--h2" data-aos="fade-zoom-in" data-aos-duration="2000" data-aos-delay="1000">Technologie, které k výrobě používáme</h1>
-                <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="1250">V oblasti sklářství existuje řada inovativních technologií, které umožňují transformovat obyčejné kusy skla do unikátních uměleckých děl a funkčních předmětů. Tyto technologie zahrnují pískování, lepení, hydroglazuru, vodní paprsek, mačkání a broušení. Každá z těchto metod nabízí jedinečné možnosti zpracování skla, od vytváření textur a vzorů přes spojování a modelování až po zdokonalování povrchu a tvaru. Každá technologie přináší do oboru sklářství svůj vlastní kreativní přístup a umožňuje umělcům, designérům a řemeslníkům vyjádřit svou kreativitu a oživit skleněné materiály nevídanými způsoby.</p>
-                <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="2000" data-aos-delay="1500">Každá z těchto technologií přináší do oblasti sklářství unikátní možnosti a způsoby zpracování skla pro různé estetické a funkční účely.</p>
-        </section>
         <section class="section--full-width">
             <h2 class="heading--hidden">Technologie</h2>
           <div class="section__dlazdice section__dlazdice--3">
               <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000">
-                  <div class="box--text">
                       <img class="img--dlazdice" src="img/technologies/brouseni.jpg" alt="">
-                      <figcaption>
-                        <p class="img-heading">Broušení</p>
-                    </figcaption>
-                  </div>
               </figure>
               <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000">
-                  <div class="box--text">
                       <img class="img--dlazdice" src="img/technologies/vypalovani.jpg" alt="">
-                      <figcaption>
-                        <p class="img-heading">Tavení</p>
-                    </figcaption>
-                  </div>
               </figure>
               <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000">
-                  <div class="box--text">
                       <img class="img--dlazdice" src="img/technologies/lepeni.jpg" alt="">
-                      <figcaption>
-                        <p class="img-heading">Lepení</p>
-                    </figcaption>
-                  </div>
               </figure>
           </div>
       </section>
@@ -164,6 +148,7 @@
             <div class="icon-box">
                 <a class="icon-box__icon--instagram" href="https://www.instagram.com/preciosa_trophies" target="_blank"><span class="text--hidden">Instagram</span></a>
                 <a class="icon-box__icon--facebook" href="https://www.facebook.com/preciosatrophies" target="_blank"><span class="text--hidden">Facebook</span></a>
+                <a class="icon-box__icon--linkedin" href="https://www.linkedin.com/in/tereza-rudolfov%C3%A1-0a4b6383/" target="_blank"><span class="text--hidden">LinkedIn</span></a>
             </div>
             <div class="icon-box">
                 <a class="icon-box__icon--phone" href="tel:+420777291336"><span class="text text--hidden">Telefon</span></a>
@@ -172,7 +157,7 @@
         </div>
         <div class="footer-container">
             <p class="footer-container__text">©&nbsp;Copyright&nbsp;2023 -&nbsp;Preciosa Beauty,&nbsp;s.r.o.</p>
-            <p class="footer-container__text">Vytvořila: Natálie Ryšavá</p>
+            <p class="footer-container__text">Vytvořila Natálie Ryšavá</p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>

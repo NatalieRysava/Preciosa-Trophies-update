@@ -72,7 +72,7 @@ body {
 
 .header {
     margin: 0 auto;
-    height: 18rem;
+    height: 16rem;
 }
 
 .header--pozadi {
@@ -157,6 +157,7 @@ header::after {
     top: 0;
     right: 0;
     z-index: -3;
+    pointer-events: none;
 }
 
 header::before {
@@ -170,6 +171,7 @@ header::before {
     top: 0;
     left: 0;
     z-index: -1;
+    pointer-events: none;
 }
 
 a {
@@ -191,9 +193,12 @@ footer::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: -3;
+    z-index: -1;
 }
 
+.swiper-slide p, .swiper-slide h3 {
+    margin-inline: 3rem;
+}
 
 
 .header--blue-gradient::before {
@@ -257,10 +262,6 @@ footer::after {
     background-color: #E8DEC8;
 }
 
-.section--inspiration {
-    padding-inline: 6rem;
-}
-
 img {
     display: block;
     width: 100%;
@@ -289,9 +290,7 @@ figure {
 
 .section__dlazdice {
     display: grid;
-    grid-gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
-    padding: 6rem;
 }
 
 .img--dlazdice {
@@ -311,11 +310,11 @@ figure {
     object-fit: contain;
 }
 
-.section--logo a img {
+.section--logo figure img {
     transition: .5s;
 }
 
-.section--logo a:hover img {
+.section--logo figure:hover img {
     transform: scale(1.2);
     transition: .5s;
 }
@@ -398,6 +397,7 @@ figure {
 
 .box--text {
     position: relative;
+    width: 100%;
 }
 
 figcaption {
@@ -466,7 +466,7 @@ figure:has(.box--text) {
 */
 
 .menu--upper {
-    padding-inline: 2.5rem;
+    padding-inline: 1.5rem;
     display: flex;
     gap: 2rem;
 }
@@ -474,6 +474,7 @@ figure:has(.box--text) {
 .section--offer article {
     display: flex;
     align-items: start;
+    align-items: center;
     gap: 4rem;
 }
 
@@ -482,7 +483,7 @@ article div {
 }
 
 .article__figure {
-    width: 25vw;
+    width: 40vw;
     aspect-ratio: 1;
     flex-shrink: 0
 }
@@ -494,13 +495,11 @@ article h2 {
 .section--offer {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
-    padding: 8rem;
+    padding-top: 0;
     align-items: center;
 }
 
 .section--introduction {
-    height: calc(100vh - 18rem - 6rem);
     position: relative;
 }
 
@@ -541,15 +540,16 @@ li::marker {
     margin-block: 2rem;
 }
 
-
-
-
+.text--absolute .heading--h2 {
+    color: var(--basic-white);
+}
 
 .scroll {
     position: absolute;
     left: 50%;
     bottom: 30vh;
     opacity: 0;
+    z-index: 1;
     transform: translateX(-50%);
     animation: scroll .75s 1s ease-in forwards;
 }
@@ -615,6 +615,10 @@ li::marker {
     padding-top: 2rem;
 }
 
+.footer-container {
+    font-size: .875rem;
+}
+
 .section--interest__text-box h2 {
     font-size: 1.5rem;
     text-align: left;
@@ -638,20 +642,10 @@ li::marker {
 
 
 
-.section--inspiration::after {
-    content: "";
-    display: block;
-    height: calc((100vw - 9rem) / 6);
-    width: 100%;
-    background-color: var(--sec-sand);
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    left: 0;
-}
-
-
 .section--inspiration {
+    padding: 0rem;
+    z-index: -4;
+    margin-top: -3rem;
     position: relative;
 }
 
@@ -682,14 +676,14 @@ li::marker {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 2rem;
 }
 
 .icon-box {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .icon-box > a {
@@ -701,8 +695,8 @@ li::marker {
 [class*="icon-box__icon--"]::before {
     display: block;
     content: "";
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     background-size: contain;
     background-repeat: no-repeat;
     background-origin: content-box;
@@ -710,35 +704,43 @@ li::marker {
 }
 
 .icon-box__icon--phone::before {
-    background-image: url(icons/icon_phone.svg);
+    background-image: url(svg-icons/icon_phone.svg);
 }
 
 .icon-box__icon--phone:hover::before {
-    background-image: url(icons/icon_phone-hover.svg);
+    background-image: url(svg-icons/icon_phone-hover.svg);
 }
 
 .icon-box__icon--email::before {
-    background-image: url(icons/icon_email.svg);
+    background-image: url(svg-icons/icon_email.svg);
 }
 
 .icon-box__icon--email:hover::before {
-    background-image: url(icons/icon_email-hover.svg);
+    background-image: url(svg-icons/icon_email-hover.svg);
 }
 
 .icon-box__icon--instagram::before {
-    background-image: url(icons/icon_instagram.svg);
+    background-image: url(svg-icons/icon_instagram.svg);
 }
 
 .icon-box__icon--instagram:hover::before {
-    background-image: url(icons/icon_instagram-hover.svg);
+    background-image: url(svg-icons/icon_instagram-hover.svg);
 }
 
 .icon-box__icon--facebook::before {
-    background-image: url(icons/icon_facebook.svg);
+    background-image: url(svg-icons/icon_facebook.svg);
 }
 
 .icon-box__icon--facebook:hover::before {
-    background-image: url(icons/icon_facebook-hover.svg);
+    background-image: url(svg-icons/icon_facebook-hover.svg);
+}
+
+.icon-box__icon--linkedin::before {
+    background-image: url(svg-icons/icon_linkedin.svg);
+}
+
+.icon-box__icon--linkedin:hover::before {
+    background-image: url(svg-icons/icon_linkedin-hover.svg);
 }
 
 .footer-box {
@@ -783,8 +785,9 @@ li::marker {
 
 @media screen and (min-width: 590px) {
     .icon-container {
+        position: relative;
         flex-direction: row;
-        justify-content: space-between;
+        z-index: 2;
     }
 
     .footer-box {
@@ -803,6 +806,8 @@ li::marker {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            z-index: 2;
           }
     
           .footer-container__link--maker {
@@ -894,41 +899,13 @@ li::marker {
         max-width: 100px;
     }
 
-    .box--left-down {
-        position: absolute;
-        left: -4rem;
-        top: 15rem;
-        text-align: right;
-    }
-
-    .box--left-up {
-        position: absolute;
-        left: -2rem;
-        top: 7rem;
-        text-align: right;
-        max-width: 200px;
-    }
-
-    .box--right-down {
-        position: absolute;
-        right: -9rem;
-        top: 15rem;
-        text-align: left;
-        max-width: 200px;
-    }
-
-    .box--right-up {
-        position: absolute;
-        right: 1rem;
-        top: 7rem;
-        text-align: left;
-    }
-
     .section--trophy {
         display: flex;
         padding: 0 6rem;
         gap: 4rem;
+        padding-right: 0;
         text-align: left;
+        flex-direction: row-reverse;
     }
 
     /*.section--trophy {
@@ -940,38 +917,9 @@ li::marker {
 
     .section--trophy__picture-box {
         background-color: var(--sec-sand);
-        padding: 3rem;
         box-sizing: border-box;
-    }
-
-    @media screen and (min-width: 1197px){
-        .section--trophy__text-box {
-            width: 50%;
-        }
-
-        .section--trophy__picture-box {
-            width: 50%;
-        }
-    }
-
-    @media screen and (min-width: 1434px){
-        .section--trophy__text-box {
-            width: 55%;
-        }
-
-        .section--trophy__picture-box {
-            width: 45%;
-        }
-    }
-
-    @media screen and (min-width: 1750px){
-        .section--trophy__text-box {
-            width: 60%;
-        }
-
-        .section--trophy__picture-box {
-            width: 40%;
-        }
+        height: 100vh;
+        margin-top: -6.5rem;
     }
 
     .section--trophy__text-box {
@@ -1014,7 +962,6 @@ li::marker {
     .text-box__picture-box {
         display: flex;
         gap: 1rem;
-        margin-top: 2rem;
     }
 
     .rozmer {
@@ -1031,7 +978,7 @@ li::marker {
     }
 
     .section--trophy__text-box {
-        margin-bottom: 0;
+        margin-bottom: 3rem;
     }
 
     
@@ -1094,7 +1041,7 @@ li::marker {
         padding-bottom: 3rem;
     }
 
-    .section--technologie, .section--benefits {
+    .section--technologie {
         padding-bottom: 0;
         margin-bottom: -3rem;
     }
@@ -1180,8 +1127,8 @@ li::marker {
         display: flex;
         gap: .5rem;
         align-items: baseline;
-        margin: 2rem 6rem;
-        margin-bottom: 1.2rem;
+        margin: 3rem 6rem;
+        margin-bottom: 1.5rem;
         font-size: 0.875rem;
         padding-left: 0;
     }
@@ -1197,7 +1144,7 @@ li::marker {
     }
 
     li:has(.section__path-link--icon-home)::before {
-        content: url(icons/icon_home.svg);
+        content: url(svg-icons/icon_home.svg);
         display: inline-block;
         vertical-align: middle;
         margin-top: -.25rem;
@@ -1215,7 +1162,8 @@ li::marker {
     .text--absolute {
         position: absolute;
         left: 50%;
-        bottom: 40%;
+        top: 16rem;
+    width: 100%;
         transform: translateX(-50%);
 
     }
@@ -1751,4 +1699,74 @@ li::marker {
         .heading--vymena {
             width: 128px;
         }
+    }
+
+    .section--technologie {
+        padding-inline: 0;
+    }
+
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 220px;
+        position: absolute;
+        z-index: 1;
+        bottom: -4rem;
+        left: 0;
+        opacity: 0;
+        transition: opacity .3s, visibility .3s;
+        cursor: pointer; /* Cursor pointer for tooltip */
+    }
+    
+    .tooltip a {
+        color: var(--sec-sky-blue);
+        display: block;
+        margin-bottom: .25em;
+        text-decoration: none; /* Remove underline from links */
+        transition: color .3s; /* Smooth transition for color change */
+    }
+    
+    .tooltip a:hover {
+        color: var(--prim-gold); /* Change color on hover */
+    }
+    
+    .tooltip:hover .tooltiptext,
+    .tooltip:focus-within .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .box--left-down {
+        position: absolute;
+        left: -4rem;
+        top: 15rem;
+        text-align: right;
+    }
+
+    .box--left-up {
+        position: absolute;
+        left: -2rem;
+        top: 7rem;
+        text-align: right;
+        max-width: 200px;
+    }
+
+    .box--right-down {
+        position: absolute;
+        right: -9rem;
+        top: 15rem;
+        text-align: left;
+        max-width: 200px;
+    }
+
+    .box--right-up {
+        position: absolute;
+        right: 1rem;
+        top: 7rem;
+        text-align: left;
     }
