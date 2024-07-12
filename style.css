@@ -294,7 +294,7 @@ figure {
 }
 
 .img--dlazdice {
-    object-fit: cover;
+    object-fit: contain;
     transition: .5s;
     aspect-ratio: 1;
 }
