@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,46 +25,59 @@
 <body>
     <header class="header header--short">
     </header>
-    <main class="main--flex">
+    <main>
         <section class="section section--trophy">
             <nav class="section__path-box">
-                <li><a href="en.html" class="section__path-link section__path-link--icon-home"><span>Home</span></a></li>
-                <li><a href="en.html#trophies" class="section__path-link section__path-link--divider-dot"><span>Trophies</span></a></li>
-                <li><a href="stadium.html" class="section__path-link section__path-link--divider-dot chosen"><span>SK&nbsp;Slavia&nbsp;Prague</span></a></li>
-            </nav>
+                <li><a href="index.html" class="section__path-link section__path-link--icon-home"><span>Domů</span></a></li>
+                <li><a href="index.html#trophies" class="section__path-link section__path-link--divider-dot"><span>Trofeje</span></a></li>
+                <li><a href="eepa.html" class="section__path-link section__path-link--divider-dot chosen"><span>European Enterprise
+                    Promotion&nbsp;Awards</span></a></li>
+                </nav>
             <div class="section--trophy__text-box text-box">
                 <div class="grow">
                     <div>
-                        <h1 class="heading--h2">SK&nbsp;Slavia&nbsp;Prague</h1>
-                        <small class="subheading">Crystal stadiums</small>
+                        <h1 class="heading--h2">European Enterprise
+                            Promotion Awards</h1>
+                        <small class="subheading">Grand Jury prize</small>
                     </div>
-                        <p class="text-box__text">Football stadiums for various football clubs are among the unique products made from Czech Preciosa crystal. They are created based on photographs and other materials that mainly elaborate the details of each building or structure. They take about two months to complete and require precise work by the glassmakers and a great deal of patience by the gluers during the final assembly. Some of the stadiums are decorated with more than 7000 chaton roses and the gluing alone accounts for more than 40 hours of work. The result is a unique glass stadium that weighs almost 7 kg.</p>
-                        <p class="text-box__text text-box__text--hidden">Technologies involving 3D printing, polishing, water jet cutting, sandblasting, gluing and the application of a nanopaint coating are used during the production of each stadium. Each individual stadium is original not only due to its shape and colour, but also because the designer always tries to depict the environment and the landscape that the given stadium is located in as faithfully as possible.</p>
-                    <a class="rozbalovatko" href="#">More</a>
+                        <p class="text-box__text">Trofej pro vítěze soutěže Evropské ceny za
+                            podporu podnikání (European Enterprise
+                            Promotion Awards), která oceňuje a odměňuje
+                            nejúspěšnější projekty veřejné správy zaměřené
+                            na podporu podnikání a podnikavosti v celé
+                            Evropě.</p>
+                        <p class="text-box__text text-box__text--hidden">Preciosa se skvěle zhostila zadání a svým
+                            sklářským umem propojila historické panorama Prahy s ikonickým symbolem metra.</p>
+                        <p class="text-box__text text-box__text--hidden">Skláři zvolili kombinaci několika technologií,
+                            při nichž vznikl typický důlek z obkladů stanic
+                            pražského metra a ručně broušený křišťál je
+                            doslova v objetí pražské architektury v podobě
+                            pozlaceného kovového pásku.</p>
+                    <a class="rozbalovatko" href="#">Více</a>
                     <!--<p class="rozmer">Rozměr: 390 x 210 x 110 mm</p>-->
                 </div>
                 <div class="text-box__picture-box">
                     <figure class="figure--square">
                         <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stadion/1.webp" alt="">
+                            <img class="img--dlazdice" src="img/small/eepa/1.webp" alt="">
                         </div>
                     </figure>
                     <figure class="figure--square">
                         <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stadion/2.webp" alt="">
+                            <img class="img--dlazdice" src="img/small/eepa/2.webp" alt="">
                         </div>
                     </figure>
                     <figure class="figure--square">
                         <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stadion/3.webp" alt="">
+                            <img class="img--dlazdice" src="img/small/eepa/3.webp" alt="">
                         </div>
                     </figure>
                 </div>
-                <div class="text-box__button-box button-box"><a class="button" href="contacts.html#form">want it</a></div>
+                <div class="text-box__button-box button-box"><a class="button" href="kontakty.html#form">to chci</a></div>
             </div>
         </section>
         <figure class="section--trophy__picture-box figure--square">
-            <img src="img/Stadion.webp" alt="">
+            <img src="img/EEPA.webp" alt="">
         </figure>
     </main>
         <script>
@@ -84,10 +97,10 @@
                     });
                     textBoxGrow.classList.toggle('grow--hidden');
                     // Toggle text of the link
-                    if (toggleLink.textContent === 'More') {
-                        toggleLink.textContent = 'Less';
+                    if (toggleLink.textContent === 'Více') {
+                        toggleLink.textContent = 'Méně';
                     } else {
-                        toggleLink.textContent = 'More';
+                        toggleLink.textContent = 'Více';
                     }
                 });
             });

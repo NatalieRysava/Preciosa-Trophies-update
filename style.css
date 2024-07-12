@@ -259,7 +259,7 @@ footer::after {
 }
 
 .section__dlazdice {
-    background-color: #E8DEC8;
+    padding: 0;
 }
 
 img {
@@ -469,6 +469,7 @@ figure:has(.box--text) {
     padding-inline: 1.5rem;
     display: flex;
     gap: 2rem;
+    margin-top: 1.25rem;
 }
 
 .section--offer article {
@@ -901,8 +902,8 @@ li::marker {
 
     .section--trophy {
         display: flex;
-        padding: 0 6rem;
-        gap: 4rem;
+        padding: 0 3rem;
+        gap: 3rem;
         padding-right: 0;
         text-align: left;
         flex-direction: row-reverse;
@@ -922,9 +923,15 @@ li::marker {
         margin-top: -6.5rem;
     }
 
+    .section--trophy__picture-box img {
+        position: fixed;
+    width: 100vh;
+    }
+
     .section--trophy__text-box {
         display: flex;
         flex-direction: column;
+        gap: 2rem;
     }
 
     .section--trophy .heading--h2 {
@@ -936,7 +943,7 @@ li::marker {
     }
 
     .section--trophy__text-box div > div {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
 
     .grow {
@@ -960,8 +967,9 @@ li::marker {
     }
 
     .text-box__picture-box {
-        display: flex;
-        gap: 1rem;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 
     .rozmer {
@@ -1127,7 +1135,7 @@ li::marker {
         display: flex;
         gap: .5rem;
         align-items: baseline;
-        margin: 3rem 6rem;
+        margin: 3rem;
         margin-bottom: 1.5rem;
         font-size: 0.875rem;
         padding-left: 0;
@@ -1322,9 +1330,14 @@ li::marker {
         }
     }
 
+    .section--trophy {
+        .text-box__button-box {
+            margin-block: 1rem 1rem !important;
+        }
+    }
+
     @media screen and (max-width: 768px){
         .section__dlazdice {
-            grid-gap: 3rem;
             grid-template-columns: repeat(1, 1fr);
             grid-template-areas:
             "item1"
@@ -1336,11 +1349,19 @@ li::marker {
             "item7"
             "item8"
             "item5";
-            padding: 3rem;
         } /* dočasní, chci dát carousel */
 
-        .item8 {
-            margin-bottom: 3rem;
+        .section--trophy__picture-box img {
+            position: static;
+            width: 100%;
+        }
+
+        .section--trophy {
+            gap: .5rem;
+        }
+
+        .section--trophy__picture-box {
+            height: auto;
         }
 
         .section--contact img {
@@ -1349,10 +1370,6 @@ li::marker {
 
         .section--contact figure {
             overflow: hidden;
-        }
-
-        .item5 {
-            margin: -3rem;
         }
 
         figure:has(.box--left-down) {
@@ -1636,7 +1653,8 @@ li::marker {
         }
     }
 
-    @media only screen and (max-width: 425px) {
+
+    @media only screen and (max-width: 1224px) {
         .section__path-box {
             flex-direction: column;
         }
@@ -1769,4 +1787,81 @@ li::marker {
         right: 1rem;
         top: 7rem;
         text-align: left;
+    }
+
+
+
+
+
+    .section--trophy__picture-box {
+        background-color: var(--sec-sand);
+        box-sizing: border-box;
+        height: 100vh;
+        margin-top: 0;
+    }
+
+    .section--trophy {
+        display: flex;
+        padding: 0 3rem;
+        gap: 0;
+        padding-right: 0;
+        text-align: left;
+        flex-direction: column;
+    }
+
+    .header--short {
+        height: auto;
+        margin: 0;
+    }
+
+    .section__path-box {
+        display: flex;
+        gap: 1rem;
+        align-items: baseline;
+        margin-top: 2.25rem;
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        padding-left: 0;
+        margin-inline: 0;
+    }
+
+    .section--trophy__text-box {
+        margin-bottom: 3rem;
+    }
+
+    .section--trophy__picture-box img {
+        position: fixed;
+        width: 100vh;
+    }
+
+    .main--flex {
+        display: flex;
+        gap: 3rem;
+    }
+
+    li:has(.section__path-link--icon-home)::before {
+        content: none;
+    }
+
+    .section--trophy .chosen {
+        color: var(--sec-sky-blue);
+    }
+
+    .section__path-link--icon-home span {
+        left: auto;
+    }
+
+    .section__path-link span {
+        left: auto;
+    }
+
+    li:has(.section__path-link--divider-dot) {
+        left: auto;
+    }
+
+    
+    @media only screen and (max-width: 1284px) {
+        .section__path-box {
+            font-size: .875rem;
+        }
     }
