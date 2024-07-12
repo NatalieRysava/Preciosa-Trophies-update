@@ -1865,3 +1865,9 @@ li::marker {
             font-size: .875rem;
         }
     }
+
+    .section--trophy__picture-box video {
+        position: fixed;
+    width: 100vh;
+    right: 0;
+    }
