@@ -70,10 +70,13 @@
             </div>
         </section>
         <figure class="section--trophy__picture-box figure--square">
-            <video autoplay muted loop>
+            <video id="video" autoplay muted loop>
                 <source src="/img/CM.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+            <div class="sound-icon" id="sound-icon">
+                <img src="svg-icons/icon_muted.svg" alt="Ikona pro ovládání zvuku">
+            </div>
         </figure>
     </main>
         <script>
@@ -100,6 +103,23 @@
                     }
                 });
             });
+            </script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const video = document.getElementById("video");
+                    const soundIcon = document.getElementById("sound-icon");
+                    const soundIconImg = soundIcon.querySelector("img");
+        
+                    soundIcon.addEventListener("click", function() {
+                        if (video.muted) {
+                            video.muted = false;
+                            soundIconImg.src = "svg-icons/icon_unmuted.svg";
+                        } else {
+                            video.muted = true;
+                            soundIconImg.src = "svg-icons/icon_muted.svg";
+                        }
+                    });
+                });
             </script>
 </body>
 </html>

@@ -917,16 +917,13 @@ li::marker {
     }*/
 
     .section--trophy__picture-box {
-        background-color: var(--sec-sand);
         box-sizing: border-box;
-        height: 100vh;
-        margin-top: -6.5rem;
     }
 
-    .section--trophy__picture-box img {
+    /*.section--trophy__picture-box img {
         position: fixed;
     width: 100vh;
-    }
+    } */
 
     .section--trophy__text-box {
         display: flex;
@@ -1360,10 +1357,6 @@ li::marker {
             gap: .5rem;
         }
 
-        .section--trophy__picture-box {
-            height: auto;
-        }
-
         .section--contact img {
             margin-right: -.5rem;
         }
@@ -1384,10 +1377,6 @@ li::marker {
 
         .section__path-box {
             margin: 2rem 3rem;
-        }
-
-        .section--trophy__picture-box {
-            margin: 0 -3rem;
         }
 
         .box--left-up {
@@ -1461,10 +1450,6 @@ li::marker {
             height: auto;
         }
 
-        .section--introduction {
-            height: calc(100vh - 16rem);
-        }
-
         .section--offer {
             padding: 3rem;
         }
@@ -1512,10 +1497,6 @@ li::marker {
         .section--technologie, .section--benefits {
             padding-bottom: 3rem;
             margin-bottom: 0;
-        }
-
-        .section--inspiration {
-            padding-inline: 3rem;
         }
 
         .section:has(.video-container) {
@@ -1705,6 +1686,8 @@ li::marker {
         }
     }
 
+    
+
     @media only screen and (max-width: 359px) {
         .heading--h1 {
             font-size: 1.2rem;
@@ -1794,7 +1777,6 @@ li::marker {
 
 
     .section--trophy__picture-box {
-        background-color: var(--sec-sand);
         box-sizing: border-box;
         height: 100vh;
         margin-top: 0;
@@ -1829,10 +1811,10 @@ li::marker {
         margin-bottom: 3rem;
     }
 
-    .section--trophy__picture-box img {
+    /*.section--trophy__picture-box img {
         position: fixed;
         width: 100vh;
-    }
+    } */
 
     .main--flex {
         display: flex;
@@ -1871,3 +1853,30 @@ li::marker {
     width: 100vh;
     right: 0;
     }
+
+    @media only screen and (max-width: 1057px) {
+        .main--flex {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .section--trophy__picture-box video {
+            position: static;
+            width: 100%;
+        }
+
+        .section--trophy__text-box {
+            margin-right: 3rem;
+        }
+
+        .section--trophy__picture-box {
+            height: auto;
+        }
+
+        .div--flex {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    
