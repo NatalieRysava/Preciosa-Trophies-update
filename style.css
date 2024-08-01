@@ -1688,6 +1688,8 @@ li::marker {
 
     
 
+    
+
     @media only screen and (max-width: 359px) {
         .heading--h1 {
             font-size: 1.2rem;
@@ -1812,6 +1814,7 @@ li::marker {
     }
 
     /*.section--trophy__picture-box img {
+    /*.section--trophy__picture-box img {
         position: fixed;
         width: 100vh;
     } */
@@ -1853,6 +1856,33 @@ li::marker {
     width: 100vh;
     right: 0;
     }
+
+    @media only screen and (max-width: 1057px) {
+        .main--flex {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .section--trophy__picture-box video {
+            position: static;
+            width: 100%;
+        }
+
+        .section--trophy__text-box {
+            margin-right: 3rem;
+        }
+
+        .section--trophy__picture-box {
+            height: auto;
+        }
+
+        .div--flex {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    
 
     @media only screen and (max-width: 1057px) {
         .main--flex {
