@@ -19,7 +19,15 @@
     <meta property="og:url" content="https://pslib-cz.github.io/2023-l4-web-campaign-NatalieRysava/kontakty.html">
     <meta property="og:site_name" content="Preciosa Trophies">
     <meta property="og:type" content="website">
-    <meta property="fb:pages" content="">
+    <meta property="fb:pages" content="1031177712777517">
+    <link rel="stylesheet" href="lightgallery/css/lightgallery.css">
+    <link rel="stylesheet" href="lightgallery/css/lg-thumbnail.css">
+    <link rel="stylesheet" href="lightgallery/css/lg-zoom.css">
+    <link rel="stylesheet" href="lightgallery/css/lg-autoplay.css">
+    <script src="lightgallery/lightgallery.min.js"></script>
+    <script src="lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="lightgallery/plugins/autoplay/lg-autoplay.min.js"></script>
     <title>Inspirujte se</title>
 </head>
 <body>
@@ -83,6 +91,15 @@
             <img src="img/dlazdice/Stadion.webp" alt="">
         </figure>
     </main>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            lightGallery(document.getElementById("thumbnails"), {
+                plugins: [lgZoom, lgThumbnail, lgAutoplay],
+                speed: 500,
+                selector: ".thumbnail > a"
+            });
+        });
+    </script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 var toggleLink = document.querySelector('.rozbalovatko');

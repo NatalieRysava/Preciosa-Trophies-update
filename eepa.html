@@ -19,7 +19,15 @@
     <meta property="og:url" content="https://pslib-cz.github.io/2023-l4-web-campaign-NatalieRysava/kontakty.html">
     <meta property="og:site_name" content="Preciosa Trophies">
     <meta property="og:type" content="website">
-    <meta property="fb:pages" content="">
+    <meta property="fb:pages" content="1031177712777517">
+    <link rel="stylesheet" href="lightgallery/css/lightgallery.css">
+    <link rel="stylesheet" href="lightgallery/css/lg-thumbnail.css">
+    <link rel="stylesheet" href="lightgallery/css/lg-zoom.css">
+    <link rel="stylesheet" href="lightgallery/css/lg-autoplay.css">
+    <script src="lightgallery/lightgallery.min.js"></script>
+    <script src="lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="lightgallery/plugins/autoplay/lg-autoplay.min.js"></script>
     <title>Inspirujte se</title>
 </head>
 <body>
@@ -56,25 +64,23 @@
                     <a class="rozbalovatko" href="#">Více</a>
                     <!--<p class="rozmer">Rozměr: 390 x 210 x 110 mm</p>-->
                 </div>
-                <div class="text-box__picture-box">
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/eepa/1.webp" alt="">
-                        </div>
+                <div id="thumbnails" class="text-box__picture-box thumbnails">
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link" href="img/small/eepa/fullscreen/1.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/small/eepa/1.webp" alt="">
+                        </a>
                     </figure>
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/eepa/2.webp" alt="">
-                        </div>
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link" href="img/small/eepa/fullscreen/2.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/small/eepa/2.webp" alt="">
+                        </a>
                     </figure>
-                    <a href="mov/EEPA.webm">
-                        <figure class="figure--square">
-                            <div class="box--text">
-                                <img class="img--dlazdice" src="img/mov-screen/eepa.webp" alt="">
-                            </div>
-                        </figure>
-                    </a>
-                </div>
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link" href="mov/eepa.webm">
+                            <img class="img--dlazdice thumbnail__image" src="img/mov-screen/eepa.webp" alt="">
+                        </a>
+                    </figure>
+                </div>                
                 <div class="text-box__button-box button-box"><a class="button" href="kontakty.html#form">to chci</a></div>
             </div>
         </section>
@@ -82,6 +88,15 @@
             <img src="img/dlazdice/eepa.webp" alt="">
         </figure>
     </main>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            lightGallery(document.getElementById("thumbnails"), {
+                plugins: [lgZoom, lgThumbnail, lgAutoplay],
+                speed: 500,
+                selector: ".thumbnail > a"
+            });
+        });
+    </script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 var toggleLink = document.querySelector('.rozbalovatko');

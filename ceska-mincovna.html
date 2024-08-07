@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="aos.css">
     <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -19,7 +19,15 @@
     <meta property="og:url" content="https://pslib-cz.github.io/2023-l4-web-campaign-NatalieRysava/kontakty.html">
     <meta property="og:site_name" content="Preciosa Trophies">
     <meta property="og:type" content="website">
-    <meta property="fb:pages" content="">
+    <meta property="fb:pages" content="1031177712777517">
+    <link rel="stylesheet" href="lightgallery/css/lightgallery.css">
+    <link rel="stylesheet" href="lightgallery/css/lg-thumbnail.css">
+    <link rel="stylesheet" href="lightgallery/css/lg-zoom.css">
+    <link rel="stylesheet" href="lightgallery/css/lg-autoplay.css">
+    <script src="lightgallery/lightgallery.min.js"></script>
+    <script src="lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="lightgallery/plugins/autoplay/lg-autoplay.min.js"></script>
     <title>Inspirujte se</title>
 </head>
 <body>
@@ -49,21 +57,21 @@
                     <a class="rozbalovatko" href="#">Více</a>
                     <!--<p class="rozmer">Rozměr: 390 x 210 x 110 mm</p>-->
                 </div>
-                <div class="text-box__picture-box">
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/cm/1.webp" alt="">
-                        </div>
+                <div id="thumbnails" class="text-box__picture-box thumbnails">
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link" href="img/small/cm/fullscreen/1.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/small/cm/1.webp" alt="">
+                        </a>
                     </figure>
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/cm/2.webp" alt="">
-                        </div>
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link" href="img/small/cm/fullscreen/2.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/small/cm/2.webp" alt="">
+                        </a>
                     </figure>
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/cm/3.webp" alt="">
-                        </div>
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link" href="img/small/cm/fullscreen/3.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/small/cm/3.webp" alt="">
+                        </a>
                     </figure>
                 </div>
                 <div class="text-box__button-box button-box"><a class="button" href="kontakty.html#form">to chci</a></div>
@@ -79,47 +87,56 @@
             </div>
         </figure>
     </main>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var toggleLink = document.querySelector('.rozbalovatko');
-                var textBoxPictureBox = document.querySelector('.text-box__picture-box');
-                var textBoxTexts = document.querySelectorAll('.text-box__text');
-                var textBoxGrow = document.querySelector('.grow');
-                var textBoxTextHidden = document.querySelector('.text-box__text--hidden');
-            
-                toggleLink.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent default link behavior
-                    textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
-                    textBoxTexts.forEach(function(textBoxText) {
-                    textBoxText.classList.toggle('line-unset'); // Remove line clamp
-                    textBoxText.classList.toggle('text-box__text--show'); // Show hidden text
-                    });
-                    textBoxGrow.classList.toggle('grow--hidden');
-                    // Toggle text of the link
-                    if (toggleLink.textContent === 'Více') {
-                        toggleLink.textContent = 'Méně';
-                    } else {
-                        toggleLink.textContent = 'Více';
-                    }
-                });
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            lightGallery(document.getElementById("thumbnails"), {
+                plugins: [lgZoom, lgThumbnail, lgAutoplay],
+                speed: 500,
+                selector: ".thumbnail > a"
             });
-            </script>
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    const video = document.getElementById("video");
-                    const soundIcon = document.getElementById("sound-icon");
-                    const soundIconImg = soundIcon.querySelector("img");
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggleLink = document.querySelector('.rozbalovatko');
+            var textBoxPictureBox = document.querySelector('.text-box__picture-box');
+            var textBoxTexts = document.querySelectorAll('.text-box__text');
+            var textBoxGrow = document.querySelector('.grow');
+            var textBoxTextHidden = document.querySelector('.text-box__text--hidden');
         
-                    soundIcon.addEventListener("click", function() {
-                        if (video.muted) {
-                            video.muted = false;
-                            soundIconImg.src = "svg-icons/icon_unmuted.svg";
-                        } else {
-                            video.muted = true;
-                            soundIconImg.src = "svg-icons/icon_muted.svg";
-                        }
-                    });
+            toggleLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
+                textBoxTexts.forEach(function(textBoxText) {
+                textBoxText.classList.toggle('line-unset'); // Remove line clamp
+                textBoxText.classList.toggle('text-box__text--show'); // Show hidden text
                 });
-            </script>
+                textBoxGrow.classList.toggle('grow--hidden');
+                // Toggle text of the link
+                if (toggleLink.textContent === 'Více') {
+                    toggleLink.textContent = 'Méně';
+                } else {
+                    toggleLink.textContent = 'Více';
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const video = document.getElementById("video");
+            const soundIcon = document.getElementById("sound-icon");
+            const soundIconImg = soundIcon.querySelector("img");
+
+            soundIcon.addEventListener("click", function() {
+                if (video.muted) {
+                    video.muted = false;
+                    soundIconImg.src = "svg-icons/icon_unmuted.svg";
+                } else {
+                    video.muted = true;
+                    soundIconImg.src = "svg-icons/icon_muted.svg";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
