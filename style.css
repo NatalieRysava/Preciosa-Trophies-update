@@ -1556,74 +1556,7 @@ li::marker {
     }
 
 
-    @media only screen and (max-width: 480px) {
-        .heading--h1 {
-            font-size: 1.5rem;
-        }
-
-        .section--logo {
-            padding: 0;
-        }
-
-        .heading--vymena {
-            width: 160px;
-        }
-
-        .heading--h1 {
-            top: 2rem;
-        }
-
-        .menu__item--language {
-            right: 2rem;
-            top: 2rem;
-        }
-
-        .sound-icon {
-            bottom: 1rem;
-            right: 1rem;
-        }
-    }
-
-    @media only screen and (max-width: 525px) {
-
-        li:has(.section__path-link--icon-home)::before {
-            content: none;
-        }
     
-        .section__path-link span {
-            left: 0;
-        }
-    
-        li:has(.section__path-link--divider-dot) {
-            left: 0;
-        }
-    
-        .section__path-box {
-            gap: 1rem;
-        }
-
-        .section__path-box {
-            gap: .5rem;
-        }
-
-        .section__path-link span {
-            margin-left: calc(-13.2px / 2);
-        }
-
-        .section__path-link--icon-home span {
-            margin-left: 0;
-        }
-
-    }
-
-    @media only screen and (max-width: 484px) {
-        .section__path-link span {
-            margin-left: calc(-11.2px / 2);
-        }
-        .section__path-box {
-            font-size: .75rem;
-        }
-    }
 
 
     @media only screen and (max-width: 1224px) {
@@ -1642,58 +1575,7 @@ li::marker {
         }
     }
 
-    @media only screen and (max-width: 400px) {
-        .heading--h1 {
-            font-size: 1.5rem;
-        }
-
-        .heading--h1 {
-            top: 1.5rem;
-        }
-
-        .menu__item--language {
-            right: 1.5rem;
-            top: 1.5rem;
-            font-size: .875rem;
-        }
-
-        .sound-icon {
-            bottom: .5rem;
-            right: .5rem;
-        }
-    }
-
-    @media only screen and (max-width: 380px) {
-        .heading--h1 {
-            font-size: 1.35rem;
-        }
-
-        .section--logo {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .heading--vymena {
-            width: 144px;
-        }
-    }
-
     
-
-    
-
-    @media only screen and (max-width: 359px) {
-        .heading--h1 {
-            font-size: 1.2rem;
-        }
-
-        .section--logo {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .heading--vymena {
-            width: 128px;
-        }
-    }
 
     .section--technologie {
         padding-inline: 0;
@@ -1956,5 +1838,129 @@ li::marker {
 
     .header--pozadi {
         position: relative;
+    }
+
+    
+
+    @media only screen and (max-width: 525px) {
+
+        li:has(.section__path-link--icon-home)::before {
+            content: none;
+        }
+    
+        .section__path-link span {
+            left: 0;
+        }
+    
+        li:has(.section__path-link--divider-dot) {
+            left: 0;
+        }
+    
+        .section__path-box {
+            gap: 1rem;
+        }
+
+        .section__path-box {
+            gap: .5rem;
+        }
+
+        .section__path-link span {
+            margin-left: calc(-13.2px / 2);
+        }
+
+        .section__path-link--icon-home span {
+            margin-left: 0;
+        }
+
+    }
+
+    @media only screen and (max-width: 484px) {
+        .section__path-link span {
+            margin-left: calc(-11.2px / 2);
+        }
+        .section__path-box {
+            font-size: .75rem;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .heading--h1 {
+            font-size: 1.5rem;
+        }
+
+        .section--logo {
+            padding: 0;
+        }
+
+        .heading--vymena {
+            width: 160px;
+        }
+
+        .heading--h1 {
+            top: 2rem;
+        }
+
+        .menu__item--language {
+            right: 2rem;
+            top: 2rem;
+        }
+
+        .sound-icon {
+            bottom: 1rem;
+            right: 1rem;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .heading--h1 {
+            font-size: 1.5rem;
+        }
+
+        .heading--h1 {
+            top: 1.5rem;
+        }
+
+        .menu__item--language {
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: .875rem;
+        }
+
+        .sound-icon {
+            bottom: .5rem;
+            right: .5rem;
+        }
+    }
+
+    @media only screen and (max-width: 380px) {
+        .heading--h1 {
+            font-size: 1.35rem;
+        }
+
+        .section--logo {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .heading--vymena {
+            width: 144px;
+        }
+    }
+
+    
+
+    
+
+    @media only screen and (max-width: 359px) {
+        .heading--h1 {
+            font-size: 1.2rem;
+        }
+
+        .section--logo {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .heading--vymena {
+            width: 128px;
+        }
     }
     
