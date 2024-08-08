@@ -652,7 +652,7 @@ li::marker {
 
 .sound-icon {
     position: absolute;
-    bottom: 2rem;
+    top: 1.25rem;
     right: 2rem;
     color: white;
     padding: 1rem;
@@ -1280,6 +1280,14 @@ li::marker {
         }
     }
 
+    
+
+    @media only screen and (max-width: 1240px) {
+        .section--offer {
+            gap: 2rem;
+        }
+    }
+
     @media only screen and (max-width: 1176px) {
         figcaption .button-box {
             margin-block: 3rem 2rem;
@@ -1291,6 +1299,11 @@ li::marker {
         
         .section--logo {
             grid-template-columns: repeat(4, 1fr);
+        }
+
+        .section--offer {
+            gap: 4rem;
+            padding-bottom: 4rem;
         }
     }
 
@@ -1351,6 +1364,7 @@ li::marker {
         .section--trophy__picture-box img {
             position: static;
             width: 100%;
+            height: 100%;
         }
 
         .section--trophy {
@@ -1541,29 +1555,6 @@ li::marker {
         }
     }
 
-    @media only screen and (max-width: 540px) {
-        .heading--h1 {
-            font-size: 2rem;
-        }
-
-        .heading--vymena {
-            width: calc(320px / 3 * 2);
-        }
-
-        .heading--h1 {
-            top: 2.5rem;
-        }
-
-        .menu__item--language {
-            right: 2.5rem;
-            top: 2.5rem;
-        }
-
-        .sound-icon {
-            bottom: 1.5rem;
-            right: 1.5rem;
-        }
-    }
 
     @media only screen and (max-width: 480px) {
         .heading--h1 {
@@ -1822,6 +1813,7 @@ li::marker {
     .main--flex {
         display: flex;
         gap: 3rem;
+        position: relative;
     }
 
     li:has(.section__path-link--icon-home)::before {
@@ -1861,6 +1853,7 @@ li::marker {
         .main--flex {
             flex-direction: column;
             gap: 0;
+            position: static;
         }
 
         .section--trophy__picture-box video {
@@ -1893,6 +1886,7 @@ li::marker {
         .section--trophy__picture-box video {
             position: static;
             width: 100%;
+            margin-bottom: -.5rem;
         }
 
         .section--trophy__text-box {
@@ -1901,12 +1895,66 @@ li::marker {
 
         .section--trophy__picture-box {
             height: auto;
+        position: relative;
+        }
+
+        .sound-icon {
+            top: 2rem;
+            right: 2rem;
         }
 
         .div--flex {
             display: flex;
             flex-direction: column-reverse;
+            padding-bottom: 3rem;
         }
     }
 
+    .thumbnail__link {
+        cursor: pointer;
+    }
+
+
+    
+    .lg-sub-html {
+        display: none;
+    }
+
+    
+    @media only screen and (max-width: 540px) {
+        .heading--h1 {
+            font-size: 2rem;
+        }
+
+        .heading--vymena {
+            width: calc(320px / 3 * 2);
+        }
+
+        .heading--h1 {
+            top: 2.5rem;
+        }
+
+        .menu__item--language {
+            right: 2.5rem;
+            top: 2.5rem;
+        }
+
+        .sound-icon {
+            top: 1.5rem;
+            right: 1.5rem;
+            bottom: auto;
+        }
+    }
+
+    
+
+    .header--pozadi .sound-icon {
+        bottom: 2rem;
+        right: 2rem;
+        top: auto;
+    }
+
+    .header--pozadi {
+        position: relative;
+    }
     

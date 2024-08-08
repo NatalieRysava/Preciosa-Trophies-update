@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="aos.css">
+    <!-- lightGallery CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-thumbnail.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-video.min.css">
     <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -13,14 +18,14 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#173153">
     <meta name="msapplication-TileColor" content="#173153">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="Preciosa Trophies: odborníci na sklářskou výrobu">
-    <meta property="og:description" content="Oživte své okamžiky českým křišťálem! Naše unikátní ocenění, trofeje a dárky na míru ve vás zanechají nezapomenutelný dojem. Překročte hranice elegance – kontaktujte nás pro exkluzivní výtvory.">
+    <meta property="og:title" content="Preciosa Trophies: Experts in Glassmaking">
+    <meta property="og:description" content="Bring your moments to life with Czech crystal! Our unique awards, trophies, and custom gifts will leave a lasting impression. Go beyond elegance – contact us for exclusive creations.">
     <meta property="og:image" content="/2023-l4-web-campaign-NatalieRysava/og/Open-Graph-var-1.jpg">
-    <meta property="og:url" content="https://pslib-cz.github.io/2023-l4-web-campaign-NatalieRysava/kontakty.html">
+    <meta property="og:url" content="https://pslib-cz.github.io/2023-l4-web-campaign-NatalieRysava/contacts.html">
     <meta property="og:site_name" content="Preciosa Trophies">
     <meta property="og:type" content="website">
     <meta property="fb:pages" content="1031177712777517">
-    <title>Inspirujte se</title>
+    <title>Crystal Stadiums</title>
 </head>
 <body>
     <header class="header header--short">
@@ -30,76 +35,88 @@
             <nav class="section__path-box">
                 <li><a href="en.html" class="section__path-link section__path-link--icon-home"><span>Home</span></a></li>
                 <li><a href="en.html#trophies" class="section__path-link section__path-link--divider-dot"><span>Trophies</span></a></li>
-                <li><a href="stadium.html" class="section__path-link section__path-link--divider-dot chosen"><span>SK&nbsp;Slavia&nbsp;Prague</span></a></li>
+                <li><a href="stadium.html" class="section__path-link section__path-link--divider-dot chosen"><span>Crystal Stadiums</span></a></li>
             </nav>
             <div class="section--trophy__text-box text-box">
                 <div class="grow">
                     <div>
-                        <h1 class="heading--h2">SK&nbsp;Slavia&nbsp;Prague</h1>
-                        <small class="subheading">Crystal stadiums</small>
+                        <h1 class="heading--h2">Crystal Stadiums</h1>
                     </div>
-                        <p class="text-box__text">Football stadiums for various football clubs are among the unique products made from Czech Preciosa crystal. They are created based on photographs and other materials that mainly elaborate the details of each building or structure. They take about two months to complete and require precise work by the glassmakers and a great deal of patience by the gluers during the final assembly. Some of the stadiums are decorated with more than 7000 chaton roses and the gluing alone accounts for more than 40 hours of work. The result is a unique glass stadium that weighs almost 7 kg.</p>
-                        <p class="text-box__text text-box__text--hidden">Technologies involving 3D printing, polishing, water jet cutting, sandblasting, gluing and the application of a nanopaint coating are used during the production of each stadium. Each individual stadium is original not only due to its shape and colour, but also because the designer always tries to depict the environment and the landscape that the given stadium is located in as faithfully as possible.</p>
+                    <p class="text-box__text">Football stadiums for various football clubs are among the unique products made from Czech Preciosa crystal. They are created based on photographs and other materials that elaborate on the details of each building or structure. It takes about two months to complete and requires precise work by the glassmakers and a great deal of patience by the gluers during the final assembly. Some of the stadiums are decorated with more than 7,000 chaton roses, and the gluing alone accounts for more than 40 hours of work. The result is a unique glass stadium that weighs almost 7 kg.</p>
+                    <p class="text-box__text text-box__text--hidden">Technologies involving 3D printing, polishing, water jet cutting, sandblasting, gluing, and the application of a nanopaint coating are used during the production of each stadium. Each individual stadium is original not only due to its shape and color but also because the designer always tries to depict the environment and the landscape that the given stadium is located in as faithfully as possible.</p>
                     <a class="rozbalovatko" href="#">More</a>
-                    <!--<p class="rozmer">Rozměr: 390 x 210 x 110 mm</p>-->
+                    <!--<p class="rozmer">Dimensions: 390 x 210 x 110 mm</p>-->
                 </div>
-                <div class="text-box__picture-box">
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stadion/1.webp" alt="">
-                        </div>
+                <div id="thumbnails" class="text-box__picture-box">
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link" href="img/small/stadion/fullscreen/1.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/small/stadion/1.webp" alt="Crystal Stadium SK Slavia Prague">
+                        </a>
                     </figure>
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stadion/2.webp" alt="">
-                        </div>
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link" href="img/small/stadion/fullscreen/2.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/small/stadion/2.webp" alt="Detail of the Crystal Stadium">
+                        </a>
                     </figure>
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stadion/3.webp" alt="">
-                        </div>
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link"
+                           data-lg-size="1280-720"
+                           data-video='{"source": [{"src":"mov/Stadion.webm", "type":"video/webm"}], "attributes": {"preload": true, "controls": true}}'
+                           data-poster="mov-screen/stadion.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/mov-screen/stadion.webp" alt="Video of the SK Slavia Prague Stadium Production">
+                        </a>
                     </figure>
                 </div>
-                <div class="text-box__button-box button-box"><a class="button" href="contacts.html#form">want it</a></div>
+                <div class="text-box__button-box button-box"><a class="button" href="contacts.html#form">Want it</a></div>
             </div>
         </section>
         <figure class="section--trophy__picture-box figure--square">
-            <img src="img/stadion.webp" alt="">
+            <img src="img/dlazdice/Stadion.webp" alt="Glass Stadium SK Slavia Prague">
         </figure>
     </main>
+
+    <!-- Include lightGallery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script>
+    <!-- Include lightGallery plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/autoplay/lg-autoplay.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/video/lg-video.min.js"></script>
+
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
-            lightGallery(document.getElementById("thumbnails"), {
-                plugins: [lgZoom, lgThumbnail, lgAutoplay],
+            lightGallery(document.getElementById('thumbnails'), {
+                plugins: [lgThumbnail, lgZoom, lgAutoplay, lgVideo],
                 speed: 500,
-                selector: ".thumbnail > a"
+                selector: '.thumbnail > a'
             });
         });
     </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var toggleLink = document.querySelector('.rozbalovatko');
-                var textBoxPictureBox = document.querySelector('.text-box__picture-box');
-                var textBoxTexts = document.querySelectorAll('.text-box__text');
-                var textBoxGrow = document.querySelector('.grow');
-                var textBoxTextHidden = document.querySelector('.text-box__text--hidden');
-            
-                toggleLink.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent default link behavior
-                    textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
-                    textBoxTexts.forEach(function(textBoxText) {
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggleLink = document.querySelector('.rozbalovatko');
+            var textBoxPictureBox = document.querySelector('.text-box__picture-box');
+            var textBoxTexts = document.querySelectorAll('.text-box__text');
+            var textBoxGrow = document.querySelector('.grow');
+            var textBoxTextHidden = document.querySelector('.text-box__text--hidden');
+
+            toggleLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
+                textBoxTexts.forEach(function(textBoxText) {
                     textBoxText.classList.toggle('line-unset'); // Remove line clamp
                     textBoxText.classList.toggle('text-box__text--show'); // Show hidden text
-                    });
-                    textBoxGrow.classList.toggle('grow--hidden');
-                    // Toggle text of the link
-                    if (toggleLink.textContent === 'More') {
-                        toggleLink.textContent = 'Less';
-                    } else {
-                        toggleLink.textContent = 'More';
-                    }
                 });
+                textBoxGrow.classList.toggle('grow--hidden');
+                // Toggle text of the link
+                if (toggleLink.textContent === 'More') {
+                    toggleLink.textContent = 'Less';
+                } else {
+                    toggleLink.textContent = 'More';
+                }
             });
-            </script>
+        });
+    </script>
 </body>
 </html>

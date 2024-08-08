@@ -20,15 +20,13 @@
     <meta property="og:site_name" content="Preciosa Trophies">
     <meta property="og:type" content="website">
     <meta property="fb:pages" content="1031177712777517">
-    <link rel="stylesheet" href="lightgallery/css/lightgallery.css">
-    <link rel="stylesheet" href="lightgallery/css/lg-thumbnail.css">
-    <link rel="stylesheet" href="lightgallery/css/lg-zoom.css">
-    <link rel="stylesheet" href="lightgallery/css/lg-autoplay.css">
-    <script src="lightgallery/lightgallery.min.js"></script>
-    <script src="lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
-    <script src="lightgallery/plugins/zoom/lg-zoom.min.js"></script>
-    <script src="lightgallery/plugins/autoplay/lg-autoplay.min.js"></script>
-    <title>Inspirujte se</title>
+
+    <!-- Include lightGallery CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-thumbnail.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-video.min.css" rel="stylesheet">
+    <title>StarDance</title>
 </head>
 <body>
     <header class="header header--short">
@@ -59,218 +57,76 @@
                             získala požadovanou patinu. Finální spojení surové bronzové
                             podstavy a precizně vybroušeného křišťálu je dokonalé.</p>
                     <a class="rozbalovatko" href="#">Více</a>
-                    <!--<p class="rozmer">Rozměr: 390 x 210 x 110 mm</p>-->
                 </div>
-                <div class="text-box__picture-box">
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stardance/1.webp" alt="">
+                <div id="thumbnails" class="text-box__picture-box thumbnails">
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link" href="img/small/stardance/fullscreen/1.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/small/stardance/1.webp" alt="Trofej StarDance 1">
+                        </a>
                     </figure>
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stardance/2.webp" alt="">
-                        </div>
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link" href="img/small/stardance/fullscreen/2.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/small/stardance/2.webp" alt="Trofej StarDance 2">
+                        </a>
                     </figure>
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/mov-screen/stardance.webp" alt="">
-                        </div>
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link"
+                           data-lg-size="1280-720"
+                           data-video='{"source": [{"src":"mov/stardance.webm", "type":"video/webm"}], "attributes": {"preload": true, "controls": true}}'
+                           data-poster="img/mov-screen/stardance.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/mov-screen/stardance.webp" alt="Video z výroby trofejí">
+                        </a>
                     </figure>
-                </div>
+                </div>                
                 <div class="text-box__button-box button-box"><a class="button" href="kontakty.html#form">to chci</a></div>
             </div>
         </section>
         <figure class="section--trophy__picture-box figure--square">
-            <img src="img/dlazdice/StarDance.webp" alt="">
+            <img src="img/dlazdice/StarDance.webp" alt="StarDance Trofej">
         </figure>
     </main>
+
+    <!-- Include lightGallery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script>
+    <!-- Include lightGallery plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/autoplay/lg-autoplay.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/video/lg-video.min.js"></script>
+
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
-            lightGallery(document.getElementById("thumbnails"), {
-                plugins: [lgZoom, lgThumbnail, lgAutoplay],
+            lightGallery(document.getElementById('thumbnails'), {
+                plugins: [lgThumbnail, lgZoom, lgAutoplay, lgVideo],
                 speed: 500,
-                selector: ".thumbnail > a"
+                selector: '.thumbnail > a'
             });
         });
     </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var toggleLink = document.querySelector('.rozbalovatko');
-                var textBoxPictureBox = document.querySelector('.text-box__picture-box');
-                var textBoxTexts = document.querySelectorAll('.text-box__text');
-                var textBoxGrow = document.querySelector('.grow');
-                var textBoxTextHidden = document.querySelector('.text-box__text--hidden');
-            
-                toggleLink.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent default link behavior
-                    textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
-                    textBoxTexts.forEach(function(textBoxText) {
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggleLink = document.querySelector('.rozbalovatko');
+            var textBoxPictureBox = document.querySelector('.text-box__picture-box');
+            var textBoxTexts = document.querySelectorAll('.text-box__text');
+            var textBoxGrow = document.querySelector('.grow');
+
+            toggleLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
+                textBoxTexts.forEach(function(textBoxText) {
                     textBoxText.classList.toggle('line-unset'); // Remove line clamp
                     textBoxText.classList.toggle('text-box__text--show'); // Show hidden text
-                    });
-                    textBoxGrow.classList.toggle('grow--hidden');
-                    // Toggle text of the link
-                    if (toggleLink.textContent === 'Více') {
-                        toggleLink.textContent = 'Méně';
-                    } else {
-                        toggleLink.textContent = 'Více';
-                    }
                 });
-            });
-            </script>
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    const video = document.getElementById("video");
-                    const soundIcon = document.getElementById("sound-icon");
-                    const soundIconImg = soundIcon.querySelector("img");
-        
-                    soundIcon.addEventListener("click", function() {
-                        if (video.muted) {
-                            video.muted = false;
-                            soundIconImg.src = "svg-icons/icon_unmuted.svg";
-                        } else {
-                            video.muted = true;
-                            soundIconImg.src = "svg-icons/icon_muted.svg";
-                        }
-                    });
-                });
-            </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">    
-    <link rel="stylesheet" href="aos.css">
-    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#173153">
-    <meta name="msapplication-TileColor" content="#173153">
-    <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="Preciosa Trophies: odborníci na sklářskou výrobu">
-    <meta property="og:description" content="Oživte své okamžiky českým křišťálem! Naše unikátní ocenění, trofeje a dárky na míru ve vás zanechají nezapomenutelný dojem. Překročte hranice elegance – kontaktujte nás pro exkluzivní výtvory.">
-    <meta property="og:image" content="/2023-l4-web-campaign-NatalieRysava/og/Open-Graph-var-1.jpg">
-    <meta property="og:url" content="https://pslib-cz.github.io/2023-l4-web-campaign-NatalieRysava/kontakty.html">
-    <meta property="og:site_name" content="Preciosa Trophies">
-    <meta property="og:type" content="website">
-    <meta property="fb:pages" content="1031177712777517">
-    <title>Inspirujte se</title>
-</head>
-<body>
-    <header class="header header--short">
-    </header>
-    <main class="main--flex">
-        <section class="section section--trophy">
-            <nav class="section__path-box">
-                <li><a href="index.html" class="section__path-link section__path-link--icon-home"><span>Domů</span></a></li>
-                <li><a href="index.html#trophies" class="section__path-link section__path-link--divider-dot"><span>Trofeje</span></a></li>
-                <li><a href="stardance.html" class="section__path-link section__path-link--divider-dot chosen"><span>StarDance</span></a></li>
-            </nav>
-            <div class="section--trophy__text-box text-box">
-                <div class="grow">
-                    <div>
-                        <h1 class="heading--h2">StarDance</h1>
-                    </div>
-                        <p class="text-box__text">Trofej Stardance navrhl architekt Jan Vlček. Cena
-                            symbolizuje deset spojených prutů ve tvaru hvězd, které
-                            ve finále rozkvetou v strom korunovaný symbolickou disco
-                            koulí. Deset prutů zakončených do tvaru hvězd symbolizuje
-                            deset tanečních párů, deset obručí zase představuje deset kol
-                            nebo také deset ročníků taneční soutěže. Trofej, která váží
-                            více než 5 kg, obdržel vítězný pár StarDance ročníku 2019.
-                            Ceně vévodí skleněná rautová koule s průměrem 100 mm,
-                            která je ručně dobrušovaná, leštěná a následně zafixovaná
-                            do podstavy trofeje, ručně odlévané z bronzu. Samotná
-                            bronzová podstava je broušená a následně leštěná tak, aby
-                            získala požadovanou patinu. Finální spojení surové bronzové
-                            podstavy a precizně vybroušeného křišťálu je dokonalé.</p>
-                    <a class="rozbalovatko" href="#">Více</a>
-                    <!--<p class="rozmer">Rozměr: 390 x 210 x 110 mm</p>-->
-                </div>
-                <div class="text-box__picture-box">
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stardance/1.webp" alt="">
-                    </figure>
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stardance/2.webp" alt="">
-                        </div>
-                    </figure>
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stardance/3.webp" alt="">
-                        </div>
-                    </figure>
-                </div>
-                <div class="text-box__button-box button-box"><a class="button" href="kontakty.html#form">to chci</a></div>
-            </div>
-        </section>
-        <figure class="section--trophy__picture-box figure--square">
-            <video id="video" autoplay muted loop>
-                <source src="/img/StarDance.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="sound-icon" id="sound-icon">
-                <img src="svg-icons/icon_muted.svg" alt="Ikona pro ovládání zvuku">
-            </div>
-        </figure>
-    </main>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            lightGallery(document.getElementById("thumbnails"), {
-                plugins: [lgZoom, lgThumbnail, lgAutoplay],
-                speed: 500,
-                selector: ".thumbnail > a"
+                textBoxGrow.classList.toggle('grow--hidden');
+                // Toggle text of the link
+                if (toggleLink.textContent === 'Více') {
+                    toggleLink.textContent = 'Méně';
+                } else {
+                    toggleLink.textContent = 'Více';
+                }
             });
         });
     </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var toggleLink = document.querySelector('.rozbalovatko');
-                var textBoxPictureBox = document.querySelector('.text-box__picture-box');
-                var textBoxTexts = document.querySelectorAll('.text-box__text');
-                var textBoxGrow = document.querySelector('.grow');
-                var textBoxTextHidden = document.querySelector('.text-box__text--hidden');
-            
-                toggleLink.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent default link behavior
-                    textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
-                    textBoxTexts.forEach(function(textBoxText) {
-                    textBoxText.classList.toggle('line-unset'); // Remove line clamp
-                    textBoxText.classList.toggle('text-box__text--show'); // Show hidden text
-                    });
-                    textBoxGrow.classList.toggle('grow--hidden');
-                    // Toggle text of the link
-                    if (toggleLink.textContent === 'Více') {
-                        toggleLink.textContent = 'Méně';
-                    } else {
-                        toggleLink.textContent = 'Více';
-                    }
-                });
-            });
-            </script>
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    const video = document.getElementById("video");
-                    const soundIcon = document.getElementById("sound-icon");
-                    const soundIconImg = soundIcon.querySelector("img");
-        
-                    soundIcon.addEventListener("click", function() {
-                        if (video.muted) {
-                            video.muted = false;
-                            soundIconImg.src = "svg-icons/icon_unmuted.svg";
-                        } else {
-                            video.muted = true;
-                            soundIconImg.src = "svg-icons/icon_muted.svg";
-                        }
-                    });
-                });
-            </script>
 </body>
 </html>

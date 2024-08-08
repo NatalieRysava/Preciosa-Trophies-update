@@ -13,14 +13,20 @@
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#173153">
     <meta name="msapplication-TileColor" content="#173153">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="Preciosa Trophies: odborníci na sklářskou výrobu">
-    <meta property="og:description" content="Oživte své okamžiky českým křišťálem! Naše unikátní ocenění, trofeje a dárky na míru ve vás zanechají nezapomenutelný dojem. Překročte hranice elegance – kontaktujte nás pro exkluzivní výtvory.">
+    <meta property="og:title" content="Preciosa Trophies: Experts in Glassmaking">
+    <meta property="og:description" content="Revitalize your moments with Czech crystal! Our unique awards, trophies, and bespoke gifts leave a lasting impression. Go beyond elegance – contact us for exclusive creations.">
     <meta property="og:image" content="/2023-l4-web-campaign-NatalieRysava/og/Open-Graph-var-1.jpg">
-    <meta property="og:url" content="https://pslib-cz.github.io/2023-l4-web-campaign-NatalieRysava/kontakty.html">
+    <meta property="og:url" content="https://pslib-cz.github.io/2023-l4-web-campaign-NatalieRysava/contacts.html">
     <meta property="og:site_name" content="Preciosa Trophies">
     <meta property="og:type" content="website">
     <meta property="fb:pages" content="1031177712777517">
-    <title>Inspirujte se</title>
+    <title>StarDance</title>
+
+    <!-- Include lightGallery CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-thumbnail.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-video.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="header header--short">
@@ -37,66 +43,78 @@
                     <div>
                         <h1 class="heading--h2">StarDance</h1>
                     </div>
-                        <p class="text-box__text">The StarDance (StarDance is the Czech version of Strictly Come Dancing) trophy was designed by the architect Jan Vlček. The award symbolises ten connected twigs in the shape of stars, which in the end bloom into a tree crowned with a symbolic crystal disco ball. The ten rods ending in the shape of stars symbolise the ten participating dance couples, while the ten hoops represent the ten rounds in the competition. The trophy, which weighs more than 5 kg, went to the victorious couple in the 2019 iteration of StarDance. The award is dominated by a faceted ball with a diameter of 100 mm, which has been hand cut, polished and subsequently adhered to the trophy base which has been hand cast from bronze. The bronze base has been ground and polished to achieve the required patina. The final combination of the raw bronze base and the precision cut crystal is flawless.</p>
+                    <p class="text-box__text">The StarDance trophy was designed by architect Jan Vlček. The award symbolizes ten interconnected rods shaped like stars, which culminate in a tree crowned with a symbolic disco ball. The ten rods represent the ten dance couples, and the ten hoops symbolize the ten rounds or seasons of the dance competition. The trophy, weighing over 5 kg, was awarded to the winning couple of the 2019 StarDance season. It features a crystal ball with a diameter of 100 mm, hand-cut, polished, and mounted on a bronze base. The bronze base is ground and polished to achieve a desired patina. The final fusion of the raw bronze base and the precisely cut crystal is flawless.</p>
                     <a class="rozbalovatko" href="#">More</a>
-                    <!--<p class="rozmer">Rozměr: 390 x 210 x 110 mm</p>-->
                 </div>
-                <div class="text-box__picture-box">
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stardance/1.webp" alt="">
+                <div id="thumbnails" class="text-box__picture-box thumbnails">
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link" href="img/small/stardance/fullscreen/1.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/small/stardance/1.webp" alt="StarDance Trophy Image 1">
+                        </a>
                     </figure>
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stardance/2.webp" alt="">
-                        </div>
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link" href="img/small/stardance/fullscreen/2.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/small/stardance/2.webp" alt="StarDance Trophy Image 2">
+                        </a>
                     </figure>
-                    <figure class="figure--square">
-                        <div class="box--text">
-                            <img class="img--dlazdice" src="img/small/stardance/3.webp" alt="">
-                        </div>
+                    <figure class="figure--square thumbnail">
+                        <a class="box--text thumbnail__link"
+                           data-lg-size="1280-720"
+                           data-video='{"source": [{"src":"mov/stardance.webm", "type":"video/webm"}], "attributes": {"preload": true, "controls": true}}'
+                           data-poster="img/mov-screen/stardance.webp">
+                            <img class="img--dlazdice thumbnail__image" src="img/mov-screen/stardance.webp" alt="Video of Trophy Production">
+                        </a>
                     </figure>
                 </div>
-                <div class="text-box__button-box button-box"><a class="button" href="contacts.html#form">want it</a></div>
+                <div class="text-box__button-box button-box"><a class="button" href="contacts.html#form">Want it</a></div>
             </div>
         </section>
         <figure class="section--trophy__picture-box figure--square">
-            <img src="img/StarDance.webp" alt="">
+            <img src="img/dlazdice/StarDance.webp" alt="StarDance Trophy">
         </figure>
     </main>
+
+    <!-- Include lightGallery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/lightgallery.min.js"></script>
+    <!-- Include lightGallery plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/autoplay/lg-autoplay.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/video/lg-video.min.js"></script>
+
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
-            lightGallery(document.getElementById("thumbnails"), {
-                plugins: [lgZoom, lgThumbnail, lgAutoplay],
+            lightGallery(document.getElementById('thumbnails'), {
+                plugins: [lgThumbnail, lgZoom, lgAutoplay, lgVideo],
                 speed: 500,
-                selector: ".thumbnail > a"
+                selector: '.thumbnail > a'
             });
         });
     </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var toggleLink = document.querySelector('.rozbalovatko');
-                var textBoxPictureBox = document.querySelector('.text-box__picture-box');
-                var textBoxTexts = document.querySelectorAll('.text-box__text');
-                var textBoxGrow = document.querySelector('.grow');
-                var textBoxTextHidden = document.querySelector('.text-box__text--hidden');
-            
-                toggleLink.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent default link behavior
-                    textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
-                    textBoxTexts.forEach(function(textBoxText) {
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggleLink = document.querySelector('.rozbalovatko');
+            var textBoxPictureBox = document.querySelector('.text-box__picture-box');
+            var textBoxTexts = document.querySelectorAll('.text-box__text');
+            var textBoxGrow = document.querySelector('.grow');
+
+            toggleLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                textBoxPictureBox.classList.toggle('hidden'); // Toggle visibility of pictures
+                textBoxTexts.forEach(function(textBoxText) {
                     textBoxText.classList.toggle('line-unset'); // Remove line clamp
                     textBoxText.classList.toggle('text-box__text--show'); // Show hidden text
-                    });
-                    textBoxGrow.classList.toggle('grow--hidden');
-                    // Toggle text of the link
-                    if (toggleLink.textContent === 'More') {
-                        toggleLink.textContent = 'Less';
-                    } else {
-                        toggleLink.textContent = 'More';
-                    }
                 });
+                textBoxGrow.classList.toggle('grow--hidden');
+                // Toggle text of the link
+                if (toggleLink.textContent === 'More') {
+                    toggleLink.textContent = 'Less';
+                } else {
+                    toggleLink.textContent = 'More';
+                }
             });
-            </script>
+        });
+    </script>
 </body>
 </html>
