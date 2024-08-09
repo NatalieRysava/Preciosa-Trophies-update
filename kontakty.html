@@ -218,5 +218,18 @@
           });
         </script>
         <script src="hamburger.js"></script>
+        <script>
+          document.querySelectorAll('.tooltip').forEach(function(element) {
+              element.addEventListener('mouseenter', function() {
+                  if (window.matchMedia("(max-width: 768px)").matches) {
+                      element.classList.add('padding-adjusted');
+                  }
+              });
+              
+              element.addEventListener('mouseleave', function() {
+                  element.classList.remove('padding-adjusted');
+              });
+          });
+          </script>
 </body>
 </html>

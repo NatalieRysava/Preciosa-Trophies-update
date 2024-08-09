@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="hamburger.css">
     <meta name="msapplication-TileColor" content="#173153">
     <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="Preciosa Trophies: odborníci na sklářskou výrobu">
-    <meta property="og:description" content="Oživte své okamžiky českým křišťálem! Naše unikátní ocenění, trofeje a dárky na míru ve vás zanechají nezapomenutelný dojem. Překročte hranice elegance – kontaktujte nás pro exkluzivní výtvory.">
+    <meta property="og:title" content="Preciosa Trophies: experts in glass production">
+    <meta property="og:description" content="Bring your moments to life with Czech crystal! Our unique awards, trophies and bespoke gifts will leave an unforgettable impression on you. Go beyond elegance – contact us for exclusive creations.">
     <meta property="og:image" content="/2023-l4-web-campaign-NatalieRysava/og/Open-Graph-var-1.jpg">
     <meta property="og:url" content="https://pslib-cz.github.io/2023-l4-web-campaign-NatalieRysava/kontakty.html">
     <meta property="og:site_name" content="Preciosa Trophies">
@@ -28,13 +28,18 @@
           var swiper1 = new Swiper('.mySwiper1', {
             speed: 500,
             loop: false,
-            slidesPerView: 3,
+            slidesPerView: 1,
             centeredSlides: false,
             spaceBetween: -16,
             autoplay: {
-                delay: 2000,
+                delay: 3000,
                 disableOnInteraction: true,
             },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                }
+            }
         });
 
           var swiperContainer = document.querySelector('.mySwiper1');
@@ -48,13 +53,17 @@
         });
         });
       </script>
-    <title>Inspirujte se</title>
+    <title>Be Inspired</title>
 </head>
 <body class="body--gradients">
     <header class="header header--blue-gradient header--pozadi position--relative">
         <img src="img/pozadi.jpg" alt="" class="photo-background">
         <a href="#onas" class="scroll"><img src="down--white.svg"></a>
-        <p class="text--absolute fade">You deserve the best.</p>
+        <div class="text--absolute fade">
+            <h1 class="heading--h2" data-aos="fade-zoom-in" data-aos-duration="1000">Technologies We Use</h1>
+            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="250">In the world of glassmaking, there are various innovative technologies that allow us to transform ordinary pieces of glass into unique works of art and functional objects. These technologies include sandblasting, bonding, hydro glaze, water jet, pressing, and grinding. Each of these methods offers unique possibilities for glass processing, from creating textures and patterns to bonding and shaping, to refining surface and form.</p> 
+            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="500">Every technique allows artists, designers, and craftsmen to express their creativity and bring glass materials to life in unprecedented ways.</p>
+    </div>
         <nav class="nav navbar">
             <div class="navbar__hamburger">
                 <a class="hamburger-menu" href="javascript:void(0)">
@@ -67,7 +76,7 @@
                 <div class="nav__menu menu navbar__menu hamburger-menu-list navbar__menu--hidden">
                     <div>
                         <li class="menu__item"><a class="menu__link" href="en.html">Home</a></li>
-                        <li class="menu__item"><a class="menu__link" href="get-inspired.html">Get inspired</a></li>
+                        <li class="menu__item"><a class="menu__link" href="get-inspired.html">Get Inspired</a></li>
                         <li class="menu__item"><a class="menu__link" href="image-book/image-book-en.pdf" target="_blank">Catalogue</a></li>
                     </div>
                     <div>
@@ -78,40 +87,20 @@
                 <li class="menu__item menu__item--language"><a class="menu__link" href="o-nas.html">CZ</a> / <a class="menu__link chosen" href="about-us.html">EN</a></li>
             </menu>
         </nav>
-        <a href="en.html"><h1 class="heading--h1"><span class="heading--vymena">Preciosa</span> Trophies</h1></a>
+        <a href="index.html"><h1 class="heading--h1"><span class="heading--vymena">Preciosa</span> Trophies</h1></a>
     </header>
     <main id="onas">
-        <section class="section section--o-nas">
-                <h1 class="heading--h2" data-aos="fade-zoom-in" data-aos-duration="1000">Technologies and process</h1>
-                <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="250">In the field of glassmaking, there is a wide range of technologies that allow the transformation of ordinary pieces of glass into unique works of art and functional objects. These technologies include sandblasting, bonding, hydro-glazing, water jet cutting, pressing, and grinding. Each of these methods offers unique glass processing possibilities, from creating textures and patterns to joining and shaping, and refining surface and shape.</p>
-                <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="500">Each technology brings its own approach to the glassmaking industry, enabling artists, designers, and craftsmen to express their creativity and breathe new life into glass materials through unprecedented processes.</p>
-        </section>
         <section class="section--full-width">
             <h2 class="heading--hidden">Technologies</h2>
-          <div class="section__dlazdice">
+          <div class="section__dlazdice section__dlazdice--3">
               <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000">
-                  <div class="box--text">
                       <img class="img--dlazdice" src="img/technologies/brouseni.jpg" alt="">
-                      <figcaption>
-                        <p class="img-heading">Grinding</p>
-                    </figcaption>
-                  </div>
               </figure>
               <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000">
-                  <div class="box--text">
                       <img class="img--dlazdice" src="img/technologies/vypalovani.jpg" alt="">
-                      <figcaption>
-                        <p class="img-heading">Melting</p>
-                    </figcaption>
-                  </div>
               </figure>
               <figure class="figure--square" data-aos="fade-zoom-in" data-aos-duration="1000">
-                  <div class="box--text">
                       <img class="img--dlazdice" src="img/technologies/lepeni.jpg" alt="">
-                      <figcaption>
-                        <p class="img-heading">Gluing</p>
-                    </figcaption>
-                  </div>
               </figure>
           </div>
       </section>
@@ -122,15 +111,15 @@
                   <div class="swiper-wrapper">
                     <article class="swiper-slide">
                             <h3 data-aos="fade-zoom-in" data-aos-duration="1000">Sandblasting</h3>
-                            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" class="aos-init aos-animate space-for-animation">Sandblasting is the process of spraying fine sand or other abrasive materials onto the surface of glass. This process allows the creation of different surface patterns, textures and designs on glass surfaces.</p>
+                            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" class="aos-init aos-animate space-for-animation">Sandblasting is a process in which fine sand or other abrasive materials are sprayed onto the surface of the glass. This process allows for the creation of various surface patterns, textures, and designs on glass surfaces.</p>
                     </article>
                     <article class="swiper-slide">
-                            <h3 data-aos="fade-zoom-in" data-aos-duration="1000">Waterjet cutting</h3>
-                            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" class="aos-init aos-animate space-for-animation">Waterjet is a technique where a high-pressure water jet is sprayed onto the surface of the glass. This process allows the creation of precise cuts and patterns on glass.</p>
+                            <h3 data-aos="fade-zoom-in" data-aos-duration="1000">Water Jet Cutting</h3>
+                            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" class="aos-init aos-animate space-for-animation">Water jet cutting is a technique where a high-pressure water jet is sprayed onto the surface of the glass. This process allows for the creation of precise cuts and patterns on the glass.</p>
                     </article>
                     <article class="swiper-slide">
                             <h3 data-aos="fade-zoom-in" data-aos-duration="1000">Grinding</h3>
-                            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" class="aos-init aos-animate space-for-animation">Grinding is a technique used to modify and refine the surface of glass. Special grinding and abrasive materials are used to achieve a certain shape, smoothness and shine on glass objects.</p>
+                            <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" class="aos-init aos-animate space-for-animation">Grinding is a technique used to modify and perfect the surface of glass. Special grinding tools and abrasive materials are used to achieve a certain shape, smoothness, and shine on glass objects.</p>
                     </article>
                     <article class="swiper-slide">
                             <h3 data-aos="fade-zoom-in" data-aos-duration="1000">Squeezing</h3>

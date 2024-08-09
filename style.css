@@ -1170,7 +1170,10 @@ li::marker {
         top: 16rem;
     width: 100%;
         transform: translateX(-50%);
+    }
 
+    .text--absolute .heading--h2, .text--absolute p {
+        padding-inline: 3rem;
     }
 
     .postion--relative {
@@ -1260,6 +1263,10 @@ li::marker {
 
         .header {
             height: 10rem;
+        }
+
+        .text--absolute {
+            top: 10rem;
         }
 
         .header--pozadi {
@@ -1462,6 +1469,7 @@ li::marker {
 
         .section--introduction {
             height: auto;
+            padding-top: 0;
         }
 
         .section--offer {
@@ -1519,6 +1527,10 @@ li::marker {
 
         .section--technologie, .section--benefits {
             padding-bottom: 0rem;
+        }
+
+        .section--technologie {
+            padding: 0rem;
         }
 
         .section__dlazdice--3 {
@@ -1903,11 +1915,13 @@ li::marker {
         .menu__item--language {
             right: 2rem;
             top: 2rem;
+            bottom: auto;
         }
 
         .sound-icon {
             bottom: 1rem;
             right: 1rem;
+            top: auto;
         }
     }
 
@@ -1961,6 +1975,63 @@ li::marker {
 
         .heading--vymena {
             width: 128px;
+        }
+    }
+
+
+    @media screen and (max-width: 768px){
+
+        .box--left-up {
+            top: 6rem;
+            left: calc(50% - 166.31px / 2);
+            text-align: center;
+        }
+
+        .box--right-up {
+            top: 11rem;
+            right: calc(50% - 83.59px / 2);
+            text-align: center;
+        }
+
+        .box--right-down {
+            top: 16rem;
+            right: calc(50% - 200px / 2);
+            text-align: center;
+        }
+
+        .box--left-down {
+            top: 1rem;
+            left: calc(50% - 83.59px / 2);
+            text-align: center;
+        }
+
+        .section--contact-en .box--left-up {
+            left: calc(50% - 122.96px / 2);
+        }
+
+        .section--contact-en .box--right-up {
+            right: calc(50% - 66.29px / 2);
+        }
+
+        .section--contact-en .box--right-down {
+            right: calc(50% - 200px / 2);
+        }
+
+        .section--contact-en .box--left-down {
+            left: calc(50% - 66.29px / 2);
+        }
+
+        .section--contact > p {
+            padding-inline: 3rem;
+        }
+
+        .tooltip .tooltiptext {
+        width: max-content;
+        left: calc((200px - 236.31px) / 2);
+        }
+
+        figure:has(.padding-adjusted) {
+            padding-top: 24rem;
         }
     }
     
