@@ -29,11 +29,11 @@
 }
 
 .lg-outer.lg-dropdown-active .lg-share {
-  color: #fff;
+  color: #000;
 }
 
 .lg-outer .lg-dropdown {
-  background-color: #fff;
+  background-color: #000;
   border-radius: 2px;
   font-size: 14px;
   list-style-type: none;
@@ -64,7 +64,7 @@
   width: 0;
   position: absolute;
   border: 8px solid transparent;
-  border-bottom-color: #fff;
+  border-bottom-color: #000;
   right: 16px;
   top: -16px;
 }

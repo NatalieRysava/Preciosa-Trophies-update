@@ -74,7 +74,7 @@
     var mediumZoomSettings = {
         margin: 40,
         mediumZoom: true,
-        backgroundColor: '#000',
+        backgroundColor: '#fff',
     };
 
     var MediumZoom = /** @class */ (function () {

@@ -85,6 +85,15 @@ h2, h3, h4, h5, h6, .heading--h2, .heading--h3, .rozmer {
     font-weight: 400;
 }
 
+.lg-sub-html {
+    font-family: 'NotoSerif', serif !important;
+    font-weight: 400 !important;
+}
+
+.lg-counter {
+    font-family: 'OpenSans', sans-serif !important;
+}
+
 h3, .heading--h3 {
     font-size: 1.5rem;
 }
@@ -185,6 +194,18 @@ footer {
 }
 
 footer::after {
+    content: "";
+    display: block;
+    height: 796px;
+    width: 100%;
+    background-image: url('gradients-bottom.webp');
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.lg-thumb-outer::after {
     content: "";
     display: block;
     height: 796px;
@@ -395,6 +416,14 @@ figure {
     opacity: .5;
 } 
 
+.box--text.thumbnail__link:hover:before {
+    background-color: transparent;
+} 
+
+.icon-box:has(.icon-box__icon--play) {
+    justify-content: center;
+}
+
 .box--text {
     position: relative;
     width: 100%;
@@ -413,6 +442,10 @@ figcaption {
     color: var(--basic-white);
     opacity: 0;
     user-select: none;
+}
+
+.thumbnail figcaption {
+    pointer-events: none;
 }
 
 .box--text:hover figcaption {
@@ -702,6 +735,15 @@ li::marker {
     background-repeat: no-repeat;
     background-origin: content-box;
     background-position: center;
+}
+
+.icon-box__icon--play::before {
+    background-image: url(svg-icons/play.svg);
+}
+
+.icon-box__icon--play {
+    user-select: none;
+    pointer-events: none;
 }
 
 .icon-box__icon--phone::before {
@@ -1810,9 +1852,9 @@ li::marker {
 
 
     
-    .lg-sub-html {
+    /*.lg-sub-html {
         display: none;
-    }
+    } */
 
     
     @media only screen and (max-width: 540px) {
@@ -2034,4 +2076,73 @@ li::marker {
             padding-top: 24rem;
         }
     }
+
+    .lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
+        border-color: var(--prim-gold) !important;
+    }
+
+    .lg-backdrop {
+        background-color: var(--basic-white) !important;
+    }
+
+    .lg-outer .lg-thumb-outer {
+        background-color: transparent !important;
+    }
+
+    .lg-toolbar .lg-icon, .lg-counter {
+        color: var(--prim-dark-blue) !important;
+    }
+
+    .lg-next, .lg-prev {
+        background-color: transparent !important;
+        border-radius: 0 !important;
+        color: var(--prim-dark-blue) !important;
+    }
+
+    .lg-outer .lg-thumb-item {
+        border-radius: 0 !important;
+    }
+
+    .lg-outer .lg-thumb-item {
+        border-radius: 0 !important;
+        border: 2px solid transparent !important;
+    }
+
+    .lg-thumb-item {
+        height: auto !important;
+    }
+
+    .lg-content {
+        z-index: 1081;
+    }
+
+    .lg-next:before {
+        content: url(svg-icons/right.svg) !important;
+    }
+    
+    .lg-prev:after {
+        content: url(svg-icons/left.svg) !important;
+    }
+
+    @media only screen and (max-width: 768px) {
+        
+        .lg-thumb {
+            padding-bottom: 1.5rem !important;
+        }
+
+        .lg-counter {
+            padding-left: 1.5rem !important;
+            padding-top: 1.5rem !important;
+        }
+
+        .lg-toolbar .lg-icon {
+            padding: 1.5rem 0 !important;
+        }
+
+        .lg-toolbar {
+            padding-right: .5rem !important;
+        }
+    }
+    
+
     

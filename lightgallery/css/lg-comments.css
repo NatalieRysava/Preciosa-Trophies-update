@@ -6,7 +6,7 @@
   top: 0;
   bottom: 0;
   z-index: 9999;
-  background-color: #fff;
+  background-color: #000;
   will-change: transform;
   -moz-transform: translate3d(100%, 0, 0);
   -o-transform: translate3d(100%, 0, 0);
@@ -21,7 +21,7 @@
 
 .lg-comment-box .lg-comment-title {
   margin: 0;
-  color: #fff;
+  color: #000;
   font-size: 18px;
 }
 
@@ -43,7 +43,7 @@
 .lg-comment-box .fb-comments {
   height: 100%;
   width: 100%;
-  background: url("../images/loading.gif") no-repeat scroll center center #fff;
+  background: url("../images/loading.gif") no-repeat scroll center center #000;
   overflow-y: auto;
   display: inline-block;
 }
@@ -70,7 +70,7 @@
 }
 
 .lg-comment-box .lg-comment-close:hover {
-  color: #fff;
+  color: #000;
 }
 
 .lg-comment-box .lg-comment-close:after {
@@ -120,7 +120,7 @@
 }
 
 .lg-outer.lg-comment-active .lg-comment-toggle {
-  color: #fff;
+  color: #000;
 }
 
 .lg-outer.lg-comment-active .lg-comment-box {

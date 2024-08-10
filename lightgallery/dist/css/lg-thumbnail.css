@@ -76,7 +76,7 @@
 @media (min-width: 768px) {
   .lg-outer .lg-thumb-item {
     border-radius: 4px;
-    border: 2px solid #fff;
+    border: 2px solid #000;
     -webkit-transition: border-color 0.25s ease;
     -o-transition: border-color 0.25s ease;
     transition: border-color 0.25s ease;

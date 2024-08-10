@@ -49,7 +49,7 @@
 
 .lg-next:hover:not(.disabled),
 .lg-prev:hover:not(.disabled) {
-  color: #fff;
+  color: #000;
 }
 
 .lg-single-item .lg-next, .lg-single-item
@@ -221,7 +221,7 @@
 }
 
 .lg-toolbar .lg-icon:hover {
-  color: #fff;
+  color: #000;
 }
 
 .lg-toolbar .lg-close:after {
@@ -334,7 +334,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 .lg-icon:focus-visible {
-  color: #fff;
+  color: #000;
   border-radius: 3px;
   outline: 1px dashed rgba(255, 255, 255, 0.6);
 }
