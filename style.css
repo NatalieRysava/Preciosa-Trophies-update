@@ -420,10 +420,6 @@ figure {
     background-color: transparent;
 } 
 
-.icon-box:has(.icon-box__icon--play) {
-    justify-content: center;
-}
-
 .box--text {
     position: relative;
     width: 100%;
@@ -461,14 +457,18 @@ figcaption {
 }
 
 .section--trophy .img-heading {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    padding-inline: 0;
+}
+
+.section--trophy figcaption:has(small) .img-heading {
+    margin-top: 0;
 }
 
 .subheading {
     font-family: 'OpenSans', sans-serif;
     text-transform: uppercase;
 }
-
 
 figcaption .subheading {
     font-size: calc((100vw - (2 * (6rem + 1.5rem + 2rem))) / (100 / 1.5));
@@ -737,15 +737,6 @@ li::marker {
     background-position: center;
 }
 
-.icon-box__icon--play::before {
-    background-image: url(svg-icons/play.svg);
-}
-
-.icon-box__icon--play {
-    user-select: none;
-    pointer-events: none;
-}
-
 .icon-box__icon--phone::before {
     background-image: url(svg-icons/icon_phone.svg);
 }
@@ -979,6 +970,16 @@ li::marker {
 
     .section--trophy .subheading {
         font-size: 1.125rem;
+    }
+
+    .section--trophy .thumbnail .subheading {
+        font-size: 1rem;
+        width: auto;
+    }
+
+    .thumbnail figcaption {
+        box-sizing: border-box;
+        padding-inline: 1.25rem;
     }
 
     .section--trophy__text-box div > div {
@@ -2077,6 +2078,88 @@ li::marker {
         }
     }
 
+    .section--trophy .thumbnail .subheading {
+        display: block;
+        line-height: 1.6;
+    }
+
+    @media screen and (min-width: 352px) and (max-width: 768px){
+
+        .section--trophy .img-heading {
+            font-size: 1.4rem;
+        }
+
+        .section--trophy .thumbnail .subheading {
+            display: block;
+            line-height: 1.5;
+        }
+    }
+
+    @media screen and (min-width: 352px) and (max-width: 743px){
+
+        .section--trophy .img-heading {
+            font-size: 1.25rem;
+        }
+
+        .section--trophy .thumbnail .subheading {
+            font-size: .9rem;
+        }
+    }
+
+    @media screen and (min-width: 352px) and (max-width: 690px){
+
+        .section--trophy .img-heading {
+            font-size: 1.125rem;
+        }
+
+        .section--trophy .thumbnail .subheading {
+            font-size: .67rem;
+        }
+    }
+
+    @media screen and (min-width: 352px) and (max-width: 524px){
+
+        .section--trophy .img-heading {
+            font-size: 1rem;
+        }
+
+        .section--trophy .thumbnail .subheading {
+            font-size: .67rem;
+        }
+
+        .section--trophy figcaption:has(small) .img-heading {
+            margin-bottom: .5rem;
+        }
+    }
+
+    @media screen and (min-width: 352px) and (max-width: 504px){
+
+        .section--trophy .img-heading {
+            font-size: 1.25rem;
+        }
+    }
+
+    @media screen and (min-width: 352px) and (max-width: 400px){
+
+        .section--trophy .img-heading {
+            font-size: 1.125rem;
+        }
+    }
+
+    @media screen and (min-width: 352px) and (max-width: 380px){
+
+        .section--trophy .img-heading {
+            font-size: 1rem;
+        }
+    }
+
+    @media screen and (min-width: 352px) and (max-width: 365px){
+
+        .section--trophy .img-heading {
+            font-size: .95rem;
+        }
+    }
+
     .lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
         border-color: var(--prim-gold) !important;
     }
@@ -2145,4 +2228,22 @@ li::marker {
     }
     
 
-    
+    .box--video::after {
+        content: url(svg-icons/play.svg);
+    background-image: url(svg-icons/play.svg);
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 1.5rem;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity .5s;
+    }
+
+    .box--video:hover::after {
+    opacity: 0;
+    transition: opacity .5s;
+    }
+
