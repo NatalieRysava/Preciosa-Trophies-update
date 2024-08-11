@@ -1632,6 +1632,8 @@ li::marker {
 
     
 
+    
+
     .section--technologie {
         padding-inline: 0;
     }
@@ -2160,6 +2162,13 @@ li::marker {
         }
     }
 
+    @media screen and (max-width: 351px){
+
+        .section--trophy .thumbnail .subheading {
+            font-size: .93rem;
+        }
+    }
+
     .lg-outer .lg-thumb-item.active, .lg-outer .lg-thumb-item:hover {
         border-color: var(--prim-gold) !important;
     }
@@ -2247,3 +2256,4 @@ li::marker {
     transition: opacity .5s;
     }
 
+    
