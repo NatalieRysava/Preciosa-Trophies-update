@@ -286,15 +286,13 @@
 
       if (header && text) {
         const textBottom = text.offsetTop + text.offsetHeight;
-        const headerPadding = 48; // přídavný prostor pod textem
+        const headerPadding = 48; // 3rem ≈ 48px
         const neededHeight = textBottom + headerPadding;
         const windowHeight = window.innerHeight;
         const threshold = windowHeight - 48; // 3rem ≈ 48px
 
-        // Nastav minimální výšku headeru podle obsahu nebo 100vh
         header.style.minHeight = Math.max(windowHeight, neededHeight) + 'px';
 
-        // Skrytí scroll tlačítka, pokud obsah přesahuje prahovou hodnotu
         if (neededHeight > threshold) {
           scrollBtn?.classList.add('hidden-scroll');
         } else {

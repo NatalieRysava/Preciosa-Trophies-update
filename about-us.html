@@ -211,6 +211,32 @@
     AOS.init();
   </script>
   <script src="hamburger.js"></script>
+  <script>
+    function adjustHeaderHeight() {
+      const header = document.querySelector('.header--pozadi');
+      const text = document.querySelector('.text--absolute');
+      const scrollBtn = document.querySelector('.scroll');
+
+      if (header && text) {
+        const textBottom = text.offsetTop + text.offsetHeight;
+        const headerPadding = 48; // 3rem ≈ 48px
+        const neededHeight = textBottom + headerPadding;
+        const windowHeight = window.innerHeight;
+        const threshold = windowHeight - 48; // 3rem ≈ 48px
+
+        header.style.minHeight = Math.max(windowHeight, neededHeight) + 'px';
+
+        if (neededHeight > threshold) {
+          scrollBtn?.classList.add('hidden-scroll');
+        } else {
+          scrollBtn?.classList.remove('hidden-scroll');
+        }
+      }
+    }
+
+    window.addEventListener('load', adjustHeaderHeight);
+    window.addEventListener('resize', adjustHeaderHeight);
+  </script>
 </body>
 
 </html>
