@@ -30,7 +30,7 @@
     <script src="lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
     <script src="lightgallery/plugins/zoom/lg-zoom.min.js"></script>
     <script src="lightgallery/plugins/autoplay/lg-autoplay.min.js"></script>
-    <title>Inženýrská akademie ČR</title>
+    <title>Inženýrská akademie ČR | Trofeje | Preciosa Trophies</title>
 </head>
 
 <body>
@@ -38,14 +38,16 @@
     </header>
     <main class="main--flex">
         <section class="section section--trophy">
-            <nav class="section__path-box">
-                <li><a href="index.html" class="section__path-link section__path-link--icon-home"><span>Domů</span></a>
-                </li>
-                <li><a href="index.html#contact-us"
-                        class="section__path-link section__path-link--divider-dot"><span>Trofeje</span></a></li>
-                <li><a href="inzenyrska-akademie-cr.html"
-                        class="section__path-link section__path-link--divider-dot chosen"><span>Inženýrská akademie
-                            ČR</span></a></li>
+            <nav>
+                <ul class="section__path-box">
+                    <li><a href="./" class="section__path-link section__path-link--icon-home"><span>Domů</span></a>
+                    </li>
+                    <li><a href="./#contact-us"
+                            class="section__path-link section__path-link--divider-dot"><span>Trofeje</span></a></li>
+                    <li><a href="inzenyrska-akademie-cr.html"
+                            class="section__path-link section__path-link--divider-dot chosen"><span>Inženýrská akademie
+                                ČR</span></a></li>
+                </ul>
             </nav>
             <div class="section--trophy__text-box text-box">
                 <div class="grow">
@@ -74,8 +76,8 @@
                     <!--<p class="rozmer">Rozměr: 327 x 131 x 70 mm</p>-->
                 </div>
                 <div id="thumbnails" class="text-box__picture-box thumbnails">
-                    <figure class="box--square">
-                        <div class="box--text thumbnail">
+                    <div class="box--square">
+                        <figure class="box--text thumbnail">
                             <a class="box--text thumbnail__link" href="img/small/ia/fullscreen/1.webp">
                                 <img class="img--dlazdice thumbnail__image" src="img/small/ia/1.webp"
                                     alt="skica trofeje">
@@ -83,10 +85,10 @@
                             <figcaption>
                                 <p class="img-heading">skica trofeje</p>
                             </figcaption>
-                        </div>
-                    </figure>
-                    <figure class="box--square">
-                        <div class="box--text thumbnail">
+                        </figure>
+                    </div>
+                    <div class="box--square">
+                        <figure class="box--text thumbnail">
                             <a class="box--text thumbnail__link" href="img/small/ia/fullscreen/2.webp">
                                 <img class="img--dlazdice thumbnail__image" src="img/small/ia/2.webp"
                                     alt="skica trofeje">
@@ -94,10 +96,10 @@
                             <figcaption>
                                 <p class="img-heading">skica trofeje</p>
                             </figcaption>
-                        </div>
-                    </figure>
-                    <figure class="box--square">
-                        <div class="box--text thumbnail">
+                        </figure>
+                    </div>
+                    <div class="box--square">
+                        <figure class="box--text thumbnail">
                             <a class="box--text thumbnail__link" href="img/small/ia/fullscreen/3.webp">
                                 <img class="img--dlazdice thumbnail__image" src="img/small/ia/3.webp"
                                     alt="foto trofeje">
@@ -105,15 +107,15 @@
                             <figcaption>
                                 <p class="img-heading">foto trofeje</p>
                             </figcaption>
-                        </div>
-                    </figure>
+                        </figure>
+                    </div>
                 </div>
                 <div class="text-box__button-box button-box"><a class="button" href="kontakty.html#form">to chci</a>
                 </div>
             </div>
         </section>
         <figure class="section--trophy__picture-box box--square">
-            <video id="video" autoplay muted loop aria-multiline="produktové video, Inženýrská akademie ČR">
+            <video id="video" autoplay muted loop>
                 <source src="mov/ia.webm" type="video/webm">
                 Váš prohlížeč nepodporuje prvek video.
             </video>
@@ -122,7 +124,7 @@
             </div>
         </figure>
     </main>
-    <script type="text/javascript">
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             lightGallery(document.getElementById("thumbnails"), {
                 plugins: [lgZoom, lgThumbnail, lgAutoplay],

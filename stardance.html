@@ -28,7 +28,7 @@
     <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-thumbnail.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-video.min.css" rel="stylesheet">
-    <title>StarDance</title>
+    <title>StarDance | Trofeje | Preciosa Trophies</title>
 </head>
 
 <body>
@@ -36,14 +36,16 @@
     </header>
     <main class="main--flex">
         <section class="section section--trophy">
-            <nav class="section__path-box">
-                <li><a href="index.html" class="section__path-link section__path-link--icon-home"><span>Domů</span></a>
-                </li>
-                <li><a href="index.html#contact-us"
-                        class="section__path-link section__path-link--divider-dot"><span>Trofeje</span></a></li>
-                <li><a href="stardance.html"
-                        class="section__path-link section__path-link--divider-dot chosen"><span>StarDance</span></a>
-                </li>
+            <nav>
+                <ul class="section__path-box">
+                    <li><a href="./" class="section__path-link section__path-link--icon-home"><span>Domů</span></a>
+                    </li>
+                    <li><a href="./#contact-us"
+                            class="section__path-link section__path-link--divider-dot"><span>Trofeje</span></a></li>
+                    <li><a href="stardance.html"
+                            class="section__path-link section__path-link--divider-dot chosen"><span>StarDance</span></a>
+                    </li>
+                </ul>
             </nav>
             <div class="section--trophy__text-box text-box">
                 <div class="grow">
@@ -66,8 +68,8 @@
                     <a class="rozbalovatko" href="#">Více</a>
                 </div>
                 <div id="thumbnails" class="text-box__picture-box thumbnails">
-                    <figure class="box--square">
-                        <div class="box--text thumbnail">
+                    <div class="box--square">
+                        <figure class="box--text thumbnail">
                             <a class="box--text thumbnail__link" href="img/small/stardance/fullscreen/1.webp">
                                 <img class="img--dlazdice thumbnail__image" src="img/small/stardance/1.webp"
                                     alt="skica trofeje">
@@ -75,10 +77,10 @@
                             <figcaption>
                                 <p class="img-heading">skica trofeje</p>
                             </figcaption>
-                        </div>
-                    </figure>
-                    <figure class="box--square">
-                        <div class="box--text thumbnail">
+                        </figure>
+                    </div>
+                    <div class="box--square">
+                        <figure class="box--text thumbnail">
                             <a class="box--text thumbnail__link" href="img/small/stardance/fullscreen/2.webp">
                                 <img class="img--dlazdice thumbnail__image" src="img/small/stardance/2.webp"
                                     alt="skica trofeje">
@@ -86,10 +88,10 @@
                             <figcaption>
                                 <p class="img-heading">skica trofeje</p>
                             </figcaption>
-                        </div>
-                    </figure>
-                    <figure class="box--square">
-                        <div class="box--text box--video thumbnail">
+                        </figure>
+                    </div>
+                    <div class="box--square">
+                        <figure class="box--text box--video thumbnail">
                             <a class="box--text thumbnail__link" data-lg-size="1280-720"
                                 data-video='{"source": [{"src":"mov/stardance1.webm", "type":"video/webm"}], "attributes": {"preload": true, "controls": true}}'
                                 data-poster="img/mov-screen/stardance.webp">
@@ -99,8 +101,8 @@
                             <figcaption>
                                 <p class="img-heading">video „making&nbsp;of“</p>
                             </figcaption>
-                        </div>
-                    </figure>
+                        </figure>
+                    </div>
                 </div>
                 <div class="text-box__button-box button-box"><a class="button" href="kontakty.html#form">to chci</a>
                 </div>
@@ -119,7 +121,7 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/autoplay/lg-autoplay.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/plugins/video/lg-video.min.js"></script>
 
-    <script type="text/javascript">
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             lightGallery(document.getElementById('thumbnails'), {
                 plugins: [lgThumbnail, lgZoom, lgAutoplay, lgVideo],

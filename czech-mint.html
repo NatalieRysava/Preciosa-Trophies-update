@@ -22,7 +22,7 @@
     <meta property="og:site_name" content="Preciosa Trophies">
     <meta property="og:type" content="website">
     <meta property="fb:pages" content="1031177712777517">
-    <title>Get Inspired</title>
+    <title>Czech mint | Trophies | Preciosa Trophies</title>
     <link rel="stylesheet" href="lightgallery/css/lightgallery.css">
     <link rel="stylesheet" href="lightgallery/css/lg-thumbnail.css">
     <link rel="stylesheet" href="lightgallery/css/lg-zoom.css">
@@ -38,14 +38,17 @@
     </header>
     <main class="main--flex">
         <section class="section section--trophy">
-            <nav class="section__path-box">
-                <li><a href="en.html" class="section__path-link section__path-link--icon-home"><span>Home</span></a>
-                </li>
-                <li><a href="en.html#contact-us"
-                        class="section__path-link section__path-link--divider-dot"><span>Trophies</span></a></li>
-                <li><a href="czech-mint.html"
-                        class="section__path-link section__path-link--divider-dot chosen"><span>Czech mint</span></a>
-                </li>
+            <nav>
+                <ul class="section__path-box">
+                    <li><a href="en.html" class="section__path-link section__path-link--icon-home"><span>Home</span></a>
+                    </li>
+                    <li><a href="en.html#contact-us"
+                            class="section__path-link section__path-link--divider-dot"><span>Trophies</span></a></li>
+                    <li><a href="czech-mint.html"
+                            class="section__path-link section__path-link--divider-dot chosen"><span>Czech
+                                mint</span></a>
+                    </li>
+                </ul>
             </nav>
             <div class="section--trophy__text-box text-box">
                 <div class="grow">
@@ -61,50 +64,49 @@
                     <a class="rozbalovatko" href="#">More</a>
                 </div>
                 <div id="thumbnails" class="text-box__picture-box">
-                    <figure class="box--square">
-                        <div class="box--text thumbnail">
+                    <div class="box--square">
+                        <figure class="box--text thumbnail">
                             <a class="box--text thumbnail__link" href="img/small/cm/fullscreen/1.webp">
                                 <img class="img--dlazdice thumbnail__image" src="img/small/cm/1.webp"
                                     alt="Ag Crystal coin, Hello Baby 2024 proof">
                             </a>
                             <figcaption>
                                 <p class="img-heading">Ag Crystal coin</p>
-                                <small class="subheading">Hello Baby 2024<br>proof</small>
+                                <small class="subheading">Hello Baby 2024 <span class="text--block">proof</span></small>
                             </figcaption>
-                        </div>
-                    </figure>
-                    <figure class="box--square">
-                        <div class="box--text thumbnail">
+                        </figure>
+                    </div>
+                    <div class="box--square">
+                        <figure class="box--text thumbnail">
                             <a class="box--text thumbnail__link" href="img/small/cm/fullscreen/2.webp">
                                 <img class="img--dlazdice thumbnail__image" src="img/small/cm/2.webp"
                                     alt="Ag Crystal coin, Butterfly 2024 proof">
                             </a>
                             <figcaption>
                                 <p class="img-heading">Ag Crystal coin</p>
-                                <small class="subheading">Butterfly 2024<br>proof</small>
+                                <small class="subheading">Butterfly 2024 <span class="text--block">proof</span></small>
                             </figcaption>
-                        </div>
-                    </figure>
-                    <figure class="box--square">
-                        <div class="box--text thumbnail">
+                        </figure>
+                    </div>
+                    <div class="box--square">
+                        <figure class="box--text thumbnail">
                             <a class="box--text thumbnail__link" href="img/small/cm/fullscreen/3.webp">
                                 <img class="img--dlazdice thumbnail__image" src="img/small/cm/3.webp"
                                     alt="Ag Crystal coin, Flower 2024 proof">
                             </a>
                             <figcaption>
                                 <p class="img-heading">Ag Crystal coin</p>
-                                <small class="subheading">Flower 2024<br>proof</small>
+                                <small class="subheading">Flower 2024 <span class="text--block">proof</span></small>
                             </figcaption>
-                        </div>
-                    </figure>
+                        </figure>
+                    </div>
                 </div>
                 <div class="text-box__button-box button-box"><a class="button" href="contacts.html#form">want it</a>
                 </div>
             </div>
         </section>
         <figure class="section--trophy__picture-box box--square">
-            <video id="video" autoplay muted loop alt="product video, logo of the Czech Mint
-            ">
+            <video id="video" autoplay muted loop>
                 <source src="mov/cm1.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
@@ -113,7 +115,7 @@
             </div>
         </figure>
     </main>
-    <script type="text/javascript">
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             lightGallery(document.getElementById("thumbnails"), {
                 plugins: [lgZoom, lgThumbnail, lgAutoplay],

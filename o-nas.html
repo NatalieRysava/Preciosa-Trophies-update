@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Název stránky -->
-  <title>O nás | Preciosa Trofeje</title>
+  <title>O nás | Preciosa Trophies</title>
 
   <!-- Styly -->
   <link rel="stylesheet" href="style.css">
@@ -28,12 +28,12 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- Open Graph (OG) Meta Tagy -->
-  <meta property="og:title" content="Preciosa Trofeje: experti na sklářskou výrobu">
+  <meta property="og:title" content="Preciosa Trophies: experti na sklářskou výrobu">
   <meta property="og:description"
     content="Oživte své okamžiky s českým křišťálem! Naše jedinečné ocenění, trofeje a dárky na míru zanechají nezapomenutelný dojem. Překročte eleganci – kontaktujte nás pro exkluzivní tvorbu.">
   <meta property="og:image" content="/2023-l4-web-campaign-NatalieRysava/og/Open-Graph-var-1.jpg">
   <meta property="og:url" content="https://pslib-cz.github.io/2023-l4-web-campaign-NatalieRysava/kontakty.html">
-  <meta property="og:site_name" content="Preciosa Trofeje">
+  <meta property="og:site_name" content="Preciosa Trophies">
   <meta property="og:type" content="website">
   <meta property="fb:pages" content="1031177712777517">
 
@@ -127,12 +127,12 @@
         </ul>
 
         <a href="./" class="navbar__logo-link">
-          <h1 class="heading--h1"><span class="heading--vymena">Preciosa</span> Trophies</h1>
+          <p class="heading--h1"><span class="heading--vymena">Preciosa</span> Trophies</p>
         </a>
 
         <ul class="navbar__menu navbar__menu--right">
           <li class="menu__item"><a class="menu__link chosen" href="o-nas.html">O nás</a></li>
-          <li class="menu__item"><a class="menu__link" href="kontakty.html">Kontakt</a></li>
+          <li class="menu__item"><a class="menu__link" href="kontakty.html">Kontakty</a></li>
           <li class="menu__item menu__item--language">
             <a class="menu__link chosen" href="o-nas.html">CZ</a> /
             <a class="menu__link" href="about-us.html">EN</a>
@@ -142,21 +142,19 @@
     </nav>
   </header>
   <main id="onas">
-    <section class="section--full-width">
+    <section class="section section--technologie section--full-width">
       <h2 class="heading--hidden">Technologie</h2>
       <div class="section__dlazdice section__dlazdice--3">
         <figure class="box--square" data-aos="fade-zoom-in" data-aos-duration="1000">
-          <img class="img--dlazdice" src="img/technologies/brouseni.jpg" alt="" />
+          <img class="img--dlazdice" src="img/technologies/brouseni.jpg" alt="">
         </figure>
         <figure class="box--square" data-aos="fade-zoom-in" data-aos-duration="1000">
-          <img class="img--dlazdice" src="img/technologies/vypalovani.jpg" alt="" />
+          <img class="img--dlazdice" src="img/technologies/vypalovani.jpg" alt="">
         </figure>
         <figure class="box--square" data-aos="fade-zoom-in" data-aos-duration="1000">
-          <img class="img--dlazdice" src="img/technologies/lepeni.jpg" alt="" />
+          <img class="img--dlazdice" src="img/technologies/lepeni.jpg" alt="">
         </figure>
       </div>
-    </section>
-    <section class="section section--technologie">
       <div class="swiper swiper--full-width">
         <div class="swiper-container">
           <div class="mySwiper1">
@@ -244,7 +242,7 @@
       </h2>
       <div class="video-container">
         <iframe class="youtube-video" src="https://www.youtube.com/embed/uof1DCN026Y?si=pKRQSP_FDN1rUpr6"
-          title="YouTube video player" frameborder="0"
+          title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
@@ -276,10 +274,39 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
   <script src="./aos.js"></script>
-  <script type="text/javascript">
+  <script>
     AOS.init();
   </script>
   <script src="hamburger.js"></script>
+  <script>
+    function adjustHeaderHeight() {
+      const header = document.querySelector('.header--pozadi');
+      const text = document.querySelector('.text--absolute');
+      const scrollBtn = document.querySelector('.scroll');
+
+      if (header && text) {
+        const textBottom = text.offsetTop + text.offsetHeight;
+        const headerPadding = 48; // přídavný prostor pod textem
+        const neededHeight = textBottom + headerPadding;
+        const windowHeight = window.innerHeight;
+        const threshold = windowHeight - 48; // 3rem ≈ 48px
+
+        // Nastav minimální výšku headeru podle obsahu nebo 100vh
+        header.style.minHeight = Math.max(windowHeight, neededHeight) + 'px';
+
+        // Skrytí scroll tlačítka, pokud obsah přesahuje prahovou hodnotu
+        if (neededHeight > threshold) {
+          scrollBtn?.classList.add('hidden-scroll');
+        } else {
+          scrollBtn?.classList.remove('hidden-scroll');
+        }
+      }
+    }
+
+    window.addEventListener('load', adjustHeaderHeight);
+    window.addEventListener('resize', adjustHeaderHeight);
+  </script>
+
 </body>
 
 </html>
