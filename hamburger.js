@@ -1,54 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
   const hamburgerButtons = document.querySelectorAll(".hamburger-menu");
-
-  document.querySelector("body").onclick = (e) => {
-    const menus = document.querySelectorAll(".hamburger-menu-list");
-    let anyMenuActive = false;
-
-    for (const menu of menus) {
-      if (!menu.classList.contains("navbar__menu--hidden")) {
-        anyMenuActive = true;
-      }
-      menu.classList.add("navbar__menu--hidden");
-    }
-
-    if (anyMenuActive) {
-      document.body.classList.remove("no-scroll");
-    }
-
-    for (const button of hamburgerButtons) {
-      button.classList.remove("hamburger-menu--active");
-    }
-  };
-
-  for (const btn of hamburgerButtons) {
-    btn.onclick = (event) => {
-      event.stopPropagation();
-      const menus = document.querySelectorAll(".hamburger-menu-list");
-      let anyMenuActive = false;
-
-      for (const menu of menus) {
-        menu.classList.toggle("navbar__menu--hidden");
-        if (!menu.classList.contains("navbar__menu--hidden")) {
-          anyMenuActive = true;
-        }
-      }
-
-      if (anyMenuActive) {
-        document.body.classList.add("no-scroll");
-      } else {
-        document.body.classList.remove("no-scroll");
-      }
-
-      btn.classList.toggle("hamburger-menu--active");
-    };
-  }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburgerButtons = document.querySelectorAll(".hamburger-menu");
   const logo = document.querySelector(".navbar__logo-link");
   const language = document.querySelector(".menu__item--language");
+
+  // Zjistíme jazyk z tagu <html lang="en"> nebo "cs"
+  const lang = document.documentElement.lang || "cs"; // výchozí čeština
+
+  // Připravíme si texty pro aria-label podle jazyka
+  const ariaTexts = {
+    cs: {
+      open: "Otevřít hlavní menu",
+      close: "Zavřít hlavní menu",
+    },
+    en: {
+      open: "Open main menu",
+      close: "Close main menu",
+    },
+  };
+
+  // Vybereme texty podle jazyka (pokud neznámý jazyk, fallback na cs)
+  const texts = ariaTexts[lang] || ariaTexts.cs;
 
   function hideLogo() {
     logo.style.opacity = "0";
@@ -60,13 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
     logo.style.pointerEvents = "auto";
   }
 
-  // Funkce pro skrytí language ihned
   function hideLanguage() {
     language.style.opacity = "0";
     language.style.pointerEvents = "none";
   }
 
-  // Funkce pro zobrazení language s 0.3s zpožděním
   function showLanguageWithDelay() {
     setTimeout(() => {
       language.style.opacity = "1";
@@ -74,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 300);
   }
 
-  document.querySelector("body").onclick = (e) => {
+  document.body.onclick = (e) => {
     const menus = document.querySelectorAll(".hamburger-menu-list");
     let anyMenuActive = false;
 
@@ -87,11 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (anyMenuActive) {
       document.body.classList.remove("no-scroll");
-
-      // Při zavření menu ihned skryjeme language
       hideLanguage();
-
-      // Po 0.5s zobrazíme logo a po dalších 0.3s language
       setTimeout(() => {
         showLogo();
         showLanguageWithDelay();
@@ -100,10 +65,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     for (const button of hamburgerButtons) {
       button.classList.remove("hamburger-menu--active");
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-label", texts.open);
     }
   };
 
   for (const btn of hamburgerButtons) {
+    // Inicializuj aria-* při načtení s jazykovou mutací
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-label", texts.open);
+
     btn.onclick = (event) => {
       event.stopPropagation();
       const menus = document.querySelectorAll(".hamburger-menu-list");
@@ -118,20 +89,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (anyMenuActive) {
         document.body.classList.add("no-scroll");
-
-        // Při otevření menu necháme language viditelný (neděláme nic)
         hideLogo();
+        btn.setAttribute("aria-expanded", "true");
+        btn.setAttribute("aria-label", texts.close);
       } else {
         document.body.classList.remove("no-scroll");
-
-        // Při zavření menu ihned skryjeme language
         hideLanguage();
-
-        // Po 0.5s zobrazíme logo a po dalších 0.3s language
         setTimeout(() => {
           showLogo();
           showLanguageWithDelay();
         }, 500);
+        btn.setAttribute("aria-expanded", "false");
+        btn.setAttribute("aria-label", texts.open);
       }
 
       btn.classList.toggle("hamburger-menu--active");
