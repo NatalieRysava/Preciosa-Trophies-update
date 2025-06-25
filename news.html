@@ -1,0 +1,424 @@
+<!-- Extra page – with simulated dynamic content -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Encoding and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>News | Preciosa Trophies</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aos.css">
+    <link rel="stylesheet" href="hamburger.css">
+
+    <!-- Favicons and app icons -->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#173153">
+
+    <!-- Colors for tiles and browsers -->
+    <meta name="msapplication-TileColor" content="#173153">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph (OG) Meta Tags -->
+    <meta property="og:title" content="Preciosa Trophies: experts in glass manufacturing">
+    <meta property="og:description"
+        content="Bring your moments to life with Czech crystal! Our unique awards, trophies and custom gifts leave an unforgettable impression. Transcend elegance – contact us for exclusive creations.">
+    <meta property="og:image" content="/2023-l4-web-campaign-NatalieRysava/og/Open-Graph-var-1.jpg">
+    <meta property="og:url" content="https://pslib-cz.github.io/2023-l4-web-campaign-NatalieRysava/kontakty.html">
+    <meta property="og:site_name" content="Preciosa Trophies">
+    <meta property="og:type" content="website">
+    <meta property="fb:pages" content="1031177712777517">
+
+    <!-- SEO Description -->
+    <meta name="description"
+        content="Bring your moments to life with Czech crystal! Our unique awards, trophies and custom gifts leave an unforgettable impression. Transcend elegance – contact us for exclusive creations.">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-27Z6T5C19D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-27Z6T5C19D");
+    </script>
+</head>
+
+<body class="body--gradients">
+    <header class="header">
+        <nav class="nav navbar">
+            <div class="navbar__hamburger">
+                <a class="hamburger-menu" href="javascript:void(0)">
+                    <span class="hamburger-menu__line"></span>
+                    <span class="hamburger-menu__line"></span>
+                    <span class="hamburger-menu__line"></span>
+                </a>
+            </div>
+
+            <div class="nav__menu menu hamburger-menu-list navbar__menu--hidden">
+                <ul class="navbar__menu navbar__menu--left">
+                    <li class="menu__item"><a class="menu__link" href="en.html">Home</a></li>
+                    <li class="menu__item"><a class="menu__link" href="get-inspired.html">Get
+                            inspired</a></li>
+                    <li class="menu__item"><a class="menu__link" href="image-book/image-book-en.pdf"
+                            target="_blank">Catalogue</a></li>
+                </ul>
+                <a class="navbar__logo-link" href="en.html">
+                    <p class="heading--h1"><span class="heading--vymena">Preciosa</span> Trophies</p>
+                </a>
+                <ul class="navbar__menu navbar__menu--right">
+                    <li class="menu__item"><a class="menu__link" href="about-us.html">About us</a></li>
+                    <li class="menu__item"><a class="menu__link chosen disabled-link" href="news.html">News</a>
+                    </li>
+                    <li class="menu__item"><a class="menu__link" href="contacts.html">Contacts</a></li>
+                    <li class="menu__item menu__item--language">
+                        <a class="menu__link" href="novinky.html">CZ</a> /
+                        <a class="menu__link chosen disabled-link" href="news.html">EN</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="news-archive">
+        <div class="news-header">
+            <h1 class="heading--h2" data-aos="fade-zoom-in" data-aos-duration="1000">News from the world of crystal</h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+                Follow the latest news about our projects, awards and innovations in glassmaking
+            </p>
+        </div>
+
+        <!-- Category filters -->
+        <div class="news-filter" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+            <button class="filter-btn button active" data-category="all">All</button>
+            <button class="filter-btn button " data-category="projekty">New Projects</button>
+            <button class="filter-btn button" data-category="oceneni">Awards</button>
+            <button class="filter-btn button" data-category="technologie">Technology</button>
+            <button class="filter-btn button" data-category="events">Events</button>
+        </div>
+
+        <!-- Results count -->
+        <p class="results-count" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="1000">
+            Showing 12 articles out of 47 total news items
+        </p>
+
+        <!-- News grid -->
+        <div class="news-grid">
+            <!-- News 1 -->
+            <article class="news-card" data-category="projekty" data-aos="fade-up" data-aos-duration="1000">
+                <img src="img/dlazdice/stardance.webp" alt="New trophies for StarDance 2024">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-category">New Projects</span>
+                        <time datetime="2024-12-15">December 15, 2024</time>
+                    </div>
+                    <h2 class="news-title heading--h3">Exclusive trophies for StarDance 2024</h2>
+                    <p class="news-excerpt">
+                        We created a new collection of crystal trophies for the most watched dance show in the Czech
+                        Republic.
+                        Each trophy is hand-cut and contains unique design elements inspired by dance.
+                    </p>
+                    <a href="stardance-2024.html" class="news-link">Read more</a>
+                </div>
+            </article>
+
+            <!-- News 2 -->
+            <article class="news-card" data-category="oceneni" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="100">
+                <img src="img/dlazdice/eepa.webp" alt="Award at European Enterprise Promotion Awards">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-category">Awards</span>
+                        <time datetime="2024-11-28">November 28, 2024</time>
+                    </div>
+                    <h2 class="news-title heading--h3">Preciosa wins prestigious European award</h2>
+                    <p class="news-excerpt">
+                        Our company was honored at the European Enterprise Promotion Awards for its innovative approach
+                        to custom crystal product manufacturing and support of Czech glassmaking crafts.
+                    </p>
+                    <a href="evropske-oceneni-2024.html" class="news-link">Read more</a>
+                </div>
+            </article>
+
+            <!-- News 3 -->
+            <article class="news-card" data-category="technologie" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="200">
+                <img src="img/dlazdice/mesita.webp" alt="New 3D engraving technology">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-category">Technology</span>
+                        <time datetime="2024-11-20">November 20, 2024</time>
+                    </div>
+                    <h2 class="news-title heading--h3">Revolutionary 3D crystal engraving</h2>
+                    <p class="news-excerpt">
+                        We present the latest 3D laser engraving technology that allows us to create
+                        complex spatial images directly inside crystal blocks with incredible precision.
+                    </p>
+                    <a href="3d-gravirovani.html" class="news-link">Read more</a>
+                </div>
+            </article>
+
+            <!-- News 4 -->
+            <article class="news-card" data-category="projekty" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="300">
+                <img src="img/dlazdice/stadion.webp" alt="Crystal stadiums for football clubs">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-category">New Projects</span>
+                        <time datetime="2024-11-10">November 10, 2024</time>
+                    </div>
+                    <h2 class="news-title heading--h3">Collection of crystal stadiums for Czech clubs</h2>
+                    <p class="news-excerpt">
+                        We completed a unique series of miniature crystal stadiums for the most important Czech
+                        football clubs. Each stadium is a detailed replica of the real sports venue made with millimeter
+                        precision.
+                    </p>
+                    <a href="kristalove-stadiony.html" class="news-link">Read more</a>
+                </div>
+            </article>
+
+            <!-- News 5 -->
+            <article class="news-card" data-category="events" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="400">
+                <img src="img/spolecna-fotografie-vzorkovna2.webp" alt="Open house day">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-category">Events</span>
+                        <time datetime="2024-10-25">October 25, 2024</time>
+                    </div>
+                    <h2 class="news-title heading--h3">Open house day was a great success</h2>
+                    <p class="news-excerpt">
+                        More than 200 visitors toured our production facility and showroom during the traditional Open
+                        House Day.
+                        Guests could see the entire crystal trophy manufacturing process from design to final polishing.
+                    </p>
+                    <a href="den-otevrenych-dveri-2024.html" class="news-link">Read more</a>
+                </div>
+            </article>
+
+            <!-- News 6 -->
+            <article class="news-card" data-category="projekty" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="500">
+                <img src="img/dlazdice/gq.webp" alt="Luxury logo for GQ">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-category">New Projects</span>
+                        <time datetime="2024-10-15">October 15, 2024</time>
+                    </div>
+                    <h2 class="news-title heading--h3">Crystal logo for prestigious GQ magazine</h2>
+                    <p class="news-excerpt">
+                        We created an exclusive crystal version of the logo for the international fashion magazine GQ.
+                        The logo will be used at GQ Men of the Year award ceremonies in several European countries.
+                    </p>
+                    <a href="gq-logo-projekt.html" class="news-link">Read more</a>
+                </div>
+            </article>
+
+            <!-- News 7 -->
+            <article class="news-card" data-category="technologie" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="600">
+                <img src="img/dlazdice/mince.webp" alt="New Crystal Coin technology">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-category">Technology</span>
+                        <time datetime="2024-09-30">September 30, 2024</time>
+                    </div>
+                    <h2 class="news-title heading--h3">Innovative Crystal Coin technology</h2>
+                    <p class="news-excerpt">
+                        In cooperation with the Czech Mint, we developed a unique technology combining precious metals
+                        with crystal elements for creating luxury commemorative coins and medals.
+                    </p>
+                    <a href="crystal-coin-technologie.html" class="news-link">Read more</a>
+                </div>
+            </article>
+
+            <!-- News 8 -->
+            <article class="news-card" data-category="events" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="700">
+                <img src="img/dlazdice/ia.webp" alt="Partnership with Engineering Academy">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-category">Events</span>
+                        <time datetime="2024-09-20">September 20, 2024</time>
+                    </div>
+                    <h2 class="news-title heading--h3">New partnership with Czech Engineering Academy</h2>
+                    <p class="news-excerpt">
+                        Preciosa Trophies became the official partner of the Czech Engineering Academy for manufacturing
+                        all awards
+                        and trophies. This partnership will support young talents in technical fields.
+                    </p>
+                    <a href="partnerstvi-akademie.html" class="news-link">Read more</a>
+                </div>
+            </article>
+
+            <!-- News 9 -->
+            <article class="news-card" data-category="projekty" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="800">
+                <img src="img/dlazdice/osa.webp" alt="Special trophies for OSA">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-category">New Projects</span>
+                        <time datetime="2024-09-10">September 10, 2024</time>
+                    </div>
+                    <h2 class="news-title heading--h3">Music trophies for OSA</h2>
+                    <p class="news-excerpt">
+                        We completed a series of unique crystal trophies for the Authors Rights Protection Association.
+                        The trophy design is inspired by musical notes and sound waves created in crystal.
+                    </p>
+                    <a href="osa-hudebni-trofeje.html" class="news-link">Read more</a>
+                </div>
+            </article>
+
+            <!-- News 10 -->
+            <article class="news-card" data-category="oceneni" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="900">
+                <img src="img/logo/5.png" alt="Innovation award">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-category">Awards</span>
+                        <time datetime="2024-08-25">August 25, 2024</time>
+                    </div>
+                    <h2 class="news-title heading--h3">Award for innovation in traditional crafts</h2>
+                    <p class="news-excerpt">
+                        The Ministry of Industry and Trade awarded Preciosa Trophies for successfully combining
+                        traditional
+                        Czech glassmaking with modern technologies in custom manufacturing.
+                    </p>
+                    <a href="cena-inovace-2024.html" class="news-link">Read more</a>
+                </div>
+            </article>
+
+            <!-- News 11 -->
+            <article class="news-card" data-category="technologie" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="1000">
+                <img src="img/logo/8.png" alt="Ecological production">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-category">Technology</span>
+                        <time datetime="2024-08-15">August 15, 2024</time>
+                    </div>
+                    <h2 class="news-title heading--h3">Investment in ecological production</h2>
+                    <p class="news-excerpt">
+                        We completed the modernization of production furnaces, which will reduce CO2 emissions by 35%
+                        and energy consumption by 25%.
+                        Preciosa thus strengthens its commitment to sustainable glassmaking.
+                    </p>
+                    <a href="ekologicka-modernizace.html" class="news-link">Read more</a>
+                </div>
+            </article>
+
+            <!-- News 12 -->
+            <article class="news-card" data-category="events" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-delay="1100">
+                <img src="img/logo/12.png" alt="International trade fair">
+                <div class="news-content">
+                    <div class="news-meta">
+                        <span class="news-category">Events</span>
+                        <time datetime="2024-08-05">August 5, 2024</time>
+                    </div>
+                    <h2 class="news-title heading--h3">Success at international trade fair in Düsseldorf</h2>
+                    <p class="news-excerpt">
+                        At Europe's largest glassmaking trade fair, we presented our latest trophy collections
+                        and established new business partnerships with companies from 12 countries.
+                    </p>
+                    <a href="dusseldorf-veletrh-2024.html" class="news-link">Read more</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Pagination -->
+        <nav class="pagination" aria-label="News pagination">
+            <a href="#" class="pagination-btn button disabled-link">‹ Previous</a>
+            <a href="#" class="pagination-btn pagination-btn--padding button active">1</a>
+            <a href="novinky-strana-2.html" class="pagination-btn pagination-btn--padding button">2</a>
+            <a href="novinky-strana-3.html" class="pagination-btn pagination-btn--padding button">3</a>
+            <a href="novinky-strana-4.html" class="pagination-btn pagination-btn--padding button">4</a>
+            <a href="novinky-strana-2.html" class="pagination-btn button">Next ›</a>
+        </nav>
+    </main>
+
+    <footer>
+        <div class="icon-container">
+            <div class="icon-box">
+                <a class="icon-box__icon--instagram" href="https://www.instagram.com/preciosa_trophies"
+                    target="_blank"><span class="text--hidden">Instagram</span></a>
+                <a class="icon-box__icon--facebook" href="https://www.facebook.com/preciosatrophies"
+                    target="_blank"><span class="text--hidden">Facebook</span></a>
+                <a class="icon-box__icon--linkedin" href="https://www.linkedin.com/in/tereza-rudolfov%C3%A1-0a4b6383/"
+                    target="_blank"><span class="text--hidden">LinkedIn</span></a>
+            </div>
+            <div class="icon-box">
+                <a class="icon-box__icon--phone" href="tel:+420777291336"><span
+                        class="text text--hidden">Phone</span></a>
+                <a class="icon-box__icon--email" href="mailto:tereza.rudolfova@preciosa.com"><span
+                        class="text text--hidden">E-mail</span></a>
+            </div>
+        </div>
+        <div class="footer-container">
+            <p class="footer-container__text">©&nbsp;Copyright&nbsp;2025 -&nbsp;Preciosa Beauty,&nbsp;s.r.o.</p>
+            <p class="footer-container__text">Created by Natálie Ryšavá</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="./aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="hamburger.js"></script>
+
+    <script>
+        // Category filtering functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const newsCards = document.querySelectorAll('.news-card');
+            const resultsCount = document.querySelector('.results-count');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to current button
+                    this.classList.add('active');
+
+                    const category = this.getAttribute('data-category');
+                    let visibleCount = 0;
+
+                    newsCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                            visibleCount++;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    // Update results count
+                    if (category === 'all') {
+                        resultsCount.textContent = `Showing ${visibleCount} articles out of 47 total news items`;
+                    } else {
+                        const categoryNames = {
+                            'projekty': 'New Projects',
+                            'oceneni': 'Awards',
+                            'technologie': 'Technology',
+                            'events': 'Events'
+                        };
+                        resultsCount.textContent = `Showing ${visibleCount} articles in category "${categoryNames[category]}"`;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

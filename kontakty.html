@@ -82,9 +82,11 @@
 
         <ul class="navbar__menu navbar__menu--right">
           <li class="menu__item"><a class="menu__link" href="o-nas.html">O nás</a></li>
-          <li class="menu__item"><a class="menu__link chosen" href="kontakty.html">Kontakty</a></li>
+          <li class="menu__item"><a class="menu__link" href="novinky.html">Novinky</a></li>
+
+          <li class="menu__item"><a class="menu__link chosen disabled-link" href="kontakty.html">Kontakty</a></li>
           <li class="menu__item menu__item--language">
-            <a class="menu__link chosen" href="kontakty.html">CZ</a> /
+            <a class="menu__link chosen disabled-link" href="kontakty.html">CZ</a> /
             <a class="menu__link" href="contacts.html">EN</a>
           </li>
         </ul>
@@ -120,7 +122,7 @@
         <div data-aos="fade-left-fix" data-aos-duration="1250" data-aos-delay="2250"
           data-aos-anchor-placement="top-bottom" class="figure__box box--right-down tooltip">
           <p class="heading--h3">Tereza</p>
-          <p>Vedoucí oddělení speciálních projektů</p>
+          <p>Vedoucí oddělení speciálních&nbsp;projektů</p>
           <div class="tooltiptext">
             <a href="mailto:tereza.rudolfova@preciosa.com">tereza.rudolfova@preciosa.com</a>
             <a href="tel:+420777291336">+420 777 291 336</a>
@@ -132,22 +134,12 @@
       <video autoplay muted loop class="video-background">
         <source src="pozadi.mp4" type="video/mp4">
       </video>
-      <!-- 
-    =======================================================================
-
-    This is a working contact form. To receive email, 
-    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
-
-    Create Access Key here 👉 https://web3forms.com/
-
-    =======================================================================
- -->
-
       <h2 class="text--hidden">Kontaktní formulář</h2>
       <p class="heading--h2">Pošlete nám zprávu</p>
       <div>
+        <!-- Licenční klíč pro kontaktní formulář zakoupený na https://web3forms.com/ -->
         <form action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="7334381c-0b19-4b5f-b049-da6d523bc90a">
+          <input type="hidden" name="access_key" value="561ED326-D2EE-40FC-81AD-3F5A64FB332A">
           <input type="hidden" name="subject" value="New Submission from Web3Forms">
           <input type="checkbox" name="botcheck" style="display: none">
           <div class="container">
@@ -172,8 +164,8 @@
             <div class="checkbox">
               <input type="checkbox" id="souhlas-s-gdpr" name="souhlas-s-gdpr" value="ano" required>
               <label for="souhlas-s-gdpr">Souhlasím se zpracováním
-                <a class="chosen" href="gdpr.html">osobních údajů</a> za
-                účelem realizace obchodní příležitosti. *</label><br>
+                <a class="chosen disabled-link" href="gdpr.html">osobních údajů</a> za
+                účelem realizace obchodní příležitosti. *</label>
             </div>
             <div class="checkbox">
               <input type="checkbox" id="odber-newsletteru" name="odber-newsletteru" value="ano">
@@ -252,7 +244,7 @@
               behavior: "smooth",
             });
           }
-        }, 2000); // Posun po 2 sekundách
+        }, 2000);
       }
     });
   </script>

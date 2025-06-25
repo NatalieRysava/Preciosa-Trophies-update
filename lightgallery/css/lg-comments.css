@@ -48,7 +48,7 @@
   display: inline-block;
 }
 
-.lg-comment-box .fb-comments[fb-xfbml-state='rendered'] {
+.lg-comment-box .fb-comments[fb-xfbml-state="rendered"] {
   background-image: none;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .lg-comment-box .lg-comment-close:after {
-  content: '\e070';
+  content: "\e070";
 }
 
 .lg-comment-box iframe {
@@ -104,7 +104,7 @@
 }
 
 .lg-outer .lg-comment-toggle:after {
-  content: '\e908';
+  content: "\e908";
 }
 
 .lg-outer.lg-comment-active .lg-comment-overlay {

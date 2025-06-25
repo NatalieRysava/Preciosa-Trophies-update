@@ -64,7 +64,7 @@
                 spaceBetween: 0,
                 autoplay: {
                     delay: 1000,
-                    disableOnInteraction: true,
+                    disableOnInteraction: false,
                 },
                 breakpoints: {
                     768: {
@@ -74,16 +74,6 @@
                         slidesPerView: 2,
                     }
                 }
-            });
-
-            var swiperContainer = document.querySelector('.mySwiper1');
-
-            swiperContainer.addEventListener('mouseenter', function () {
-                swiper1.autoplay.stop();
-            });
-
-            swiperContainer.addEventListener('mouseleave', function () {
-                swiper1.autoplay.start();
             });
         });
     </script>
@@ -131,7 +121,9 @@
             <div class="nav__menu menu hamburger-menu-list navbar__menu--hidden">
                 <ul class="navbar__menu navbar__menu--left">
                     <li class="menu__item"><a class="menu__link" href="./">Domů</a></li>
-                    <li class="menu__item"><a class="menu__link chosen" href="inspirujte-se.html">Inspirujte se</a></li>
+                    <li class="menu__item"><a class="menu__link chosen disabled-link"
+                            href="inspirujte-se.html">Inspirujte
+                            se</a></li>
                     <li class="menu__item"><a class="menu__link" href="image-book/image-book-cz.pdf"
                             target="_blank">Katalog</a></li>
                 </ul>
@@ -142,9 +134,11 @@
 
                 <ul class="navbar__menu navbar__menu--right">
                     <li class="menu__item"><a class="menu__link" href="o-nas.html">O nás</a></li>
+                    <li class="menu__item"><a class="menu__link" href="novinky.html">Novinky</a></li>
+
                     <li class="menu__item"><a class="menu__link" href="kontakty.html">Kontakty</a></li>
                     <li class="menu__item menu__item--language">
-                        <a class="menu__link chosen" href="inspirujte-se.html">CZ</a> /
+                        <a class="menu__link chosen disabled-link" href="inspirujte-se.html">CZ</a> /
                         <a class="menu__link" href="get-inspired.html">EN</a>
                     </li>
                 </ul>
@@ -315,6 +309,10 @@
             <div class="section--interest__text-box">
                 <h2 data-aos="fade-zoom-in" data-aos-duration="1000">Zaujala vás naše práce? Rádi vám zašleme novinky
                     e-mailem.</h2>
+                <p class="text--hidden">Zůstaňte s námi v kontaktu a buďte mezi prvními, kdo se dozví o nových
+                    designech, technologiích a exkluzivních
+                    nabídkách. Stačí zadat svůj email a my vás budeme pravidelně informovat o všem zajímavém, co se u
+                    Preciosy děje.</p>
                 <div class="button-box" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="250"><a
                         class="button" href="kontakty.html#form">poptejte nás</a></div>
             </div>
@@ -375,7 +373,6 @@
     <script src="hamburger.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Jen pokud není hash v URL
             if (!window.location.hash) {
                 setTimeout(function () {
                     const swiperSection = document.querySelector(".swiper");
@@ -386,7 +383,7 @@
                             behavior: "smooth",
                         });
                     }
-                }, 2000); // posun po 2 vteřinách
+                }, 2000);
             }
         });
     </script>

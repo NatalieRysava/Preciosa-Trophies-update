@@ -75,42 +75,48 @@
         </a>
         <ul class="navbar__menu navbar__menu--right">
           <li class="menu__item"><a class="menu__link" href="about-us.html">About us</a></li>
-          <li class="menu__item"><a class="menu__link chosen" href="contacts.html">Contacts</a></li>
+          <li class="menu__item"><a class="menu__link" href="news.html">News</a>
+          </li>
+
+          <li class="menu__item"><a class="menu__link chosen disabled-link" href="contacts.html">Contacts</a></li>
           <li class="menu__item menu__item--language">
             <a class="menu__link" href="kontakty.html">CZ</a> /
-            <a class="menu__link chosen" href="contacts.html">EN</a>
+            <a class="menu__link chosen disabled-link" href="contacts.html">EN</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
   <main>
-    <section class="section--contact section--contact-en" id="intro">
-      <h1 class="heading--h2" data-aos="fade-zoom-in" data-aos-delay="500" data-aos-duration="1000">Contact us</h1>
-      <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="750" data-aos-duration="1000">Our
-        team that will prepare the perfect trophy for you...</p>
+    <section class="section--contact" id="intro">
+      <h1 class="heading--h2" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="500">
+        Contact us
+      </h1>
+      <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-delay="750">
+        Our team that will prepare the perfect trophy for you...
+      </p>
       <figure>
-        <img alt="" data-aos="fade-zoom-in" data-aos-delay="1750" data-aos-duration="1000"
-          src="img/spolecna-fotografie-atelier2.webp">
-        <div class="figure__box box--left-down" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
-          data-aos-delay="2250" data-aos-duration="1250">
+        <img data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="750"
+          src="img/spolecna-fotografie-atelier2.webp" alt="">
+        <div data-aos="fade-right-fix" data-aos-duration="1250" data-aos-delay="2250"
+          data-aos-anchor-placement="top-bottom" class="figure__box box--left-down">
           <p class="heading--h3">Stáňa</p>
           <p>Designer</p>
         </div>
-        <div class="figure__box box--left-up" data-aos="fade-right" data-aos-anchor-placement="top-bottom"
-          data-aos-delay="2000" data-aos-duration="1250">
+        <div data-aos="fade-right-fix" data-aos-duration="1250" data-aos-delay="2000"
+          data-aos-anchor-placement="top-bottom" class="figure__box box--left-up">
           <p class="heading--h3">Kristina</p>
-          <p>Project manager</p>
+          <p>Project manager</p>
         </div>
-        <div class="figure__box box--right-up" data-aos="fade-left" data-aos-anchor-placement="top-bottom"
-          data-aos-delay="2000" data-aos-duration="1250">
+        <div data-aos="fade-left-fix" data-aos-duration="1250" data-aos-delay="2000"
+          data-aos-anchor-placement="top-bottom" class="figure__box box--right-up">
           <p class="heading--h3">Jitka</p>
           <p>Designer</p>
         </div>
-        <div class="figure__box box--right-down tooltip" data-aos="fade-left" data-aos-anchor-placement="top-bottom"
-          data-aos-delay="2250" data-aos-duration="1250">
+        <div data-aos="fade-left-fix" data-aos-duration="1250" data-aos-delay="2250"
+          data-aos-anchor-placement="top-bottom" class="figure__box box--right-down tooltip">
           <p class="heading--h3">Tereza</p>
-          <p>Vedoucí oddělení speciálních projektů</p>
+          <p>Head of special projects&nbsp;department</p>
           <div class="tooltiptext">
             <a href="mailto:tereza.rudolfova@preciosa.com">tereza.rudolfova@preciosa.com</a>
             <a href="tel:+420777291336">+420 777 291 336</a>
@@ -122,16 +128,6 @@
       <video autoplay="" class="video-background" loop="" muted="">
         <source src="pozadi.mp4" type="video/mp4">
       </video>
-      <!-- 
-    =======================================================================
-
-    This is a working contact form. To receive email, 
-    Replace YOUR_ACCESS_KEY_HERE with your actual Access Key.
-
-    Create Access Key here 👉 https://web3forms.com/
-
-    =======================================================================
- -->
       <h2 class="text--hidden">
         Contact form
       </h2>
@@ -139,8 +135,9 @@
         Send us a message
       </p>
       <div>
+        <!-- License key for contact form purchased on https://web3forms.com/ -->
         <form action="https://api.web3forms.com/submit" method="POST">
-          <input name="access_key" type="hidden" value="7334381c-0b19-4b5f-b049-da6d523bc90a">
+          <input name="access_key" type="hidden" value="561ED326-D2EE-40FC-81AD-3F5A64FB332A">
           <input name="subject" type="hidden" value="New Submission from Web3Forms">
           <input name="botcheck" style="display: none;" type="checkbox">
           <div class="container">
@@ -164,9 +161,9 @@
           <div>
             <div class="checkbox">
               <input id="souhlas-s-gdpr" name="souhlas-s-gdpr" required="" type="checkbox" value="ano">
-              <label for="souhlas-s-gdpr"> I agree to the processing of my <a class="chosen"
+              <label for="souhlas-s-gdpr"> I agree to the processing of my <a class="chosen disabled-link"
                   href="gdpr-en.html">personal data</a> for the purpose of implementing the business opportunity.
-                *</label><br>
+                *</label>
             </div>
             <div class="checkbox">
               <input id="odber-newsletteru" name="odber-newsletteru" type="checkbox" value="ano">
@@ -221,8 +218,8 @@
       <p class="footer-container__text">Created by Natálie Ryšavá</p>
     </div>
   </footer>
-  <script crossorigin="anonymous" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
   <script src="./aos.js"></script>
   <script>
     AOS.init();
@@ -234,29 +231,31 @@
         setTimeout(function () {
           var introSection = document.getElementById("intro");
           if (introSection) {
-            var introSectionHeight = introSection.getBoundingClientRect().height;
+            var introSectionHeight =
+              introSection.getBoundingClientRect().height;
             var viewportHeight = window.innerHeight;
-            var offset = introSection.offsetTop + introSectionHeight - viewportHeight;
+            var offset =
+              introSection.offsetTop + introSectionHeight - viewportHeight;
             window.scrollTo({
               top: offset,
-              behavior: 'smooth'
+              behavior: "smooth",
             });
           }
-        }, 2000); // Posun po 2 sekundách
+        }, 2000);
       }
     });
   </script>
   <script src="hamburger.js"></script>
   <script>
-    document.querySelectorAll('.tooltip').forEach(function (element) {
-      element.addEventListener('mouseenter', function () {
+    document.querySelectorAll(".tooltip").forEach(function (element) {
+      element.addEventListener("mouseenter", function () {
         if (window.matchMedia("(max-width: 1170px)").matches) {
-          element.classList.add('padding-adjusted');
+          element.classList.add("padding-adjusted");
         }
       });
 
-      element.addEventListener('mouseleave', function () {
-        element.classList.remove('padding-adjusted');
+      element.addEventListener("mouseleave", function () {
+        element.classList.remove("padding-adjusted");
       });
     });
   </script>

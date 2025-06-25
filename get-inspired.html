@@ -59,21 +59,16 @@
                 spaceBetween: 0,
                 autoplay: {
                     delay: 1000,
-                    disableOnInteraction: true,
+                    disableOnInteraction: false,
                 },
                 breakpoints: {
                     768: {
                         slidesPerView: 3,
+                    },
+                    600: {
+                        slidesPerView: 2,
                     }
                 }
-            });
-
-            var swiperContainer = document.querySelector('.mySwiper1');
-            swiperContainer.addEventListener('mouseenter', function () {
-                swiper1.autoplay.stop();
-            });
-            swiperContainer.addEventListener('mouseleave', function () {
-                swiper1.autoplay.start();
             });
         });
     </script>
@@ -125,7 +120,8 @@
             <div class="nav__menu menu hamburger-menu-list navbar__menu--hidden">
                 <ul class="navbar__menu navbar__menu--left">
                     <li class="menu__item"><a class="menu__link" href="en.html">Home</a></li>
-                    <li class="menu__item"><a class="menu__link chosen" href="get-inspired.html">Get inspired</a></li>
+                    <li class="menu__item"><a class="menu__link chosen disabled-link" href="get-inspired.html">Get
+                            inspired</a></li>
                     <li class="menu__item"><a class="menu__link" href="image-book/image-book-en.pdf"
                             target="_blank">Catalogue</a></li>
                 </ul>
@@ -134,10 +130,13 @@
                 </a>
                 <ul class="navbar__menu navbar__menu--right">
                     <li class="menu__item"><a class="menu__link" href="about-us.html">About us</a></li>
+                    <li class="menu__item"><a class="menu__link" href="news.html">News</a>
+                    </li>
+
                     <li class="menu__item"><a class="menu__link" href="contacts.html">Contacts</a></li>
                     <li class="menu__item menu__item--language">
                         <a class="menu__link" href="inspirujte-se.html">CZ</a> /
-                        <a class="menu__link chosen" href="get-inspired.html">EN</a>
+                        <a class="menu__link chosen disabled-link" href="get-inspired.html">EN</a>
                     </li>
                 </ul>
             </div>
@@ -279,6 +278,9 @@
                 <h2 data-aos="fade-zoom-in" data-aos-duration="1000">Did our work catch your interest? We'd be happy to
                     send
                     you updates via email.</h2>
+                <p class="text--hidden">Stay connected with us and be the first to know about new designs, technologies,
+                    and exclusive offers. Simply leave your
+                    email, and we’ll keep you updated on everything exciting happening at Preciosa.</p>
                 <div class="button-box" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="250">
                     <a class="button" href="contacts.html#form">inquire us</a>
                 </div>
