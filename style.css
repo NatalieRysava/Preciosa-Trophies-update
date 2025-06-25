@@ -65,7 +65,7 @@ figure {
 }
 
 p {
-  max-width: 75ch;
+  max-width: 110ch;
   margin-inline: auto;
 }
 
@@ -84,6 +84,10 @@ h6,
   font-weight: 400;
   max-width: 26.25rem;
   margin-inline: auto;
+}
+
+.heading--full-width {
+  max-width: 75ch;
 }
 
 .heading--h1 {
@@ -334,7 +338,7 @@ header::before {
 }
 
 .section--gdpr {
-  max-width: 75ch;
+  max-width: 110ch;
   margin-inline: auto;
   padding-block: 0;
   padding-bottom: 2rem;
@@ -1832,6 +1836,25 @@ p + .box-duvody {
 
   .text--absolute {
     top: 16rem;
+  }
+
+  .scroll {
+    bottom: 6vh;
+  }
+
+  @keyframes scrollPulse {
+    0% {
+      bottom: 6vh;
+      opacity: 0;
+    }
+    50% {
+      bottom: 2rem;
+      opacity: 1;
+    }
+    100% {
+      bottom: 6vh;
+      opacity: 0;
+    }
   }
 }
 
