@@ -830,13 +830,6 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 [data-aos="fade-down-left"] {
   transform: translate3d(100px, -100px, 0);
 }
-/* Special fix for fade-left and fade-right to center them */
-[data-aos].box--left-up.aos-animate,
-[data-aos].box--right-up.aos-animate,
-[data-aos].box--right-down.aos-animate,
-[data-aos].box--left-down.aos-animate {
-  transform: translateX(-50%) translateZ(0);
-}
 
 [data-aos="fade-left-fix"] {
   transform: translate(calc(-50% + 100px), 0);

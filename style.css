@@ -538,30 +538,6 @@ header::before {
   transition: opacity 0.5s;
 }
 
-/* Position boxes */
-
-.box--left-up,
-.box--right-up,
-.box--right-down,
-.box--left-down {
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
-.box--left-up {
-  top: 6rem;
-}
-.box--right-up {
-  top: 11rem;
-}
-.box--right-down {
-  top: 16rem;
-}
-.box--left-down {
-  top: 1rem;
-}
-
 /* ==========================================================================
    FIGURES AND IMAGES
    ========================================================================== */
@@ -629,8 +605,7 @@ figure:has(.box--text),
 }
 
 .figure__box {
-  position: absolute;
-  max-width: 12.5rem;
+  width: 12rem;
 }
 
 .figure__box p {
@@ -821,11 +796,14 @@ form input[type="checkbox"] {
 
 .section--contact figure {
   position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
   overflow: hidden;
   height: auto;
   width: 100%;
+  padding-top: 2rem;
   margin: 0 auto;
-  padding-top: 21rem;
   transition: 0.5s;
   transition-delay: 0.5s;
 }
@@ -850,7 +828,7 @@ form input[type="checkbox"] {
 }
 
 .section--contact figure:has(.padding-adjusted) {
-  padding-top: 24rem;
+  padding-bottom: 2rem;
   transition: 1s;
 }
 
@@ -1483,13 +1461,11 @@ p + .box-duvody {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  position: absolute;
   z-index: 1;
-  bottom: -4rem;
-  left: 50%;
-  transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 1s, visibility 1s;
+  transition:
+    opacity 1s,
+    visibility 1s;
   transition-delay: 0.5s;
   cursor: pointer;
 }
@@ -1830,10 +1806,6 @@ p + .box-duvody {
     height: 16rem;
   }
 
-  .section--contact figure {
-    padding-top: 19rem;
-  }
-
   .text--absolute {
     top: 16rem;
   }
@@ -2035,65 +2007,12 @@ p + .box-duvody {
 }
 
 @media screen and (min-width: 1170px) {
-  .box--left-up,
-  .box--right-up,
-  .box--right-down,
-  .box--left-down {
-    left: auto;
-    transform: translateX(0);
-  }
-
-  .box--left-down {
-    left: -1rem;
-    top: 15rem;
-    text-align: right;
-  }
-
-  .box--left-up {
-    left: 2rem;
-    top: 7rem;
-    text-align: right;
-  }
-
-  .box--right-down {
-    right: -15rem;
-    top: 15rem;
-    text-align: left;
-  }
-
-  .box--right-up {
-    right: -1rem;
-    top: 7rem;
-    text-align: left;
-  }
-
-  .section--contact-en .box--left-down {
-    left: -3rem;
-  }
-
-  .section--contact-en .box--left-up {
-    left: 0;
-  }
-
-  .section--contact-en .box--right-down {
-    right: -9rem;
-  }
-
-  .section--contact-en .box--right-up {
-    right: 2rem;
-  }
-
-  figure:has(.box--left-down) {
-    padding-top: 0;
-  }
-
   .tooltip .tooltiptext {
     left: auto;
     transform: translateX(0);
   }
 
   .section--contact figure {
-    height: calc(75vh);
     width: max-content;
     overflow: visible;
   }
@@ -2281,7 +2200,9 @@ p + .box-duvody {
   background: white;
   overflow: hidden;
   box-shadow: 0 0.5rem 2rem #17315350;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .news-card:hover {
@@ -2402,5 +2323,11 @@ p + .box-duvody {
 
   .filter-btn {
     white-space: nowrap;
+  }
+
+  .section--contact figure {
+    gap: 4vw;
+    flex-direction: column;
+    align-items: center;
   }
 }
