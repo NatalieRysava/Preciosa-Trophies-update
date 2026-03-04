@@ -266,19 +266,28 @@
   </script>
   <script src="hamburger.js"></script>
   <script>
-    document.querySelectorAll(".tooltip").forEach(function (element) {
+    (function () {
 
-      if (window.matchMedia("(max-width: 1170px)").matches) return;
+      const isMobile = () => window.matchMedia("(max-width: 1170px)").matches;
 
-      element.addEventListener("mouseenter", function () {
-        element.classList.add("padding-adjusted");
-      });
+      const zuzana = document.querySelector(".box--left-up.tooltip");
+      const michaela = document.querySelector(".box--left-down.tooltip");
 
-      element.addEventListener("mouseleave", function () {
-        element.classList.remove("padding-adjusted");
-      });
+      if (zuzana) {
+        zuzana.addEventListener("click", function (e) {
+          if (!isMobile()) return;
+          window.location.href = "mailto:trophies@preciosa.com";
+        });
+      }
 
-    });
+      if (michaela) {
+        michaela.addEventListener("click", function (e) {
+          if (!isMobile()) return;
+          window.location.href = "mailto:trophies@preciosa.com";
+        });
+      }
+
+    })();
   </script>
 
 </body>
