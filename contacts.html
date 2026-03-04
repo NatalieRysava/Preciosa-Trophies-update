@@ -102,7 +102,7 @@
         <div data-aos="fade-right-fix" data-aos-duration="1250" data-aos-delay="2250"
           data-aos-anchor-placement="top-bottom" class="figure__box box--left-down tooltip">
           <p class="heading--h3">Michaela</p>
-          <p>Head of sales department</p>
+          <p>Head of Sales Department</p>
           <div class="tooltiptext">
             <a href="mailto:michaela.dubska@preciosa.com">michaela.dubska@preciosa.com</a>
           </div>
@@ -112,7 +112,7 @@
         <div data-aos="fade-right-fix" data-aos-duration="1250" data-aos-delay="2000"
           data-aos-anchor-placement="top-bottom" class="figure__box box--left-up tooltip">
           <p class="heading--h3">Zuzana</p>
-          <p>Project manager</p>
+          <p>Project Manager</p>
           <div class="tooltiptext">
             <a href="mailto:zuzana.janovova@preciosa.com">zuzana.janovova@preciosa.com</a>
           </div>
@@ -122,7 +122,7 @@
         <div data-aos="fade-left-fix" data-aos-duration="1250" data-aos-delay="2000"
           data-aos-anchor-placement="top-bottom" class="figure__box box--right-up">
           <p class="heading--h3">Kristina</p>
-          <p>Project manager</p>
+          <p>Project Coordinator</p>
         </div>
 
         <!-- right middle -->
@@ -267,19 +267,28 @@
   </script>
   <script src="hamburger.js"></script>
   <script>
-    document.querySelectorAll(".tooltip").forEach(function (element) {
+    (function () {
 
-      if (window.matchMedia("(max-width: 1170px)").matches) return;
+      const isMobile = () => window.matchMedia("(max-width: 1170px)").matches;
 
-      element.addEventListener("mouseenter", function () {
-        element.classList.add("padding-adjusted");
-      });
+      const zuzana = document.querySelector(".box--left-up.tooltip");
+      const michaela = document.querySelector(".box--left-down.tooltip");
 
-      element.addEventListener("mouseleave", function () {
-        element.classList.remove("padding-adjusted");
-      });
+      if (zuzana) {
+        zuzana.addEventListener("click", function (e) {
+          if (!isMobile()) return;
+          window.location.href = "mailto:trophies@preciosa.com";
+        });
+      }
 
-    });
+      if (michaela) {
+        michaela.addEventListener("click", function (e) {
+          if (!isMobile()) return;
+          window.location.href = "mailto:trophies@preciosa.com";
+        });
+      }
+
+    })();
   </script>
 
 </body>

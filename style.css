@@ -551,17 +551,17 @@ header::before {
 }
 
 .box--left-up {
-  top: 8rem;
+  top: 6rem;
 }
 .box--right-up {
-  top: 15rem;
+  top: 11rem;
 }
 .box--right-down {
-  top: 25rem;
+  top: 21rem;
 }
 
 .box--right-middle {
-  top: 20rem;
+  top: 16rem;
 }
 
 .box--left-down {
@@ -831,7 +831,7 @@ form input[type="checkbox"] {
   height: auto;
   width: 100%;
   margin: 0 auto;
-  padding-top: 30rem;
+  padding-top: 25rem;
   transition: 0.5s;
   transition-delay: 0.5s;
 }
@@ -2422,11 +2422,11 @@ p + .box-duvody {
 }
 
 @media (max-width: 1170px) {
+  .tooltip {
+    cursor: pointer;
+  }
+
   .tooltip .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-    position: static; /* aby byl pod jménem */
-    transform: none;
-    margin-top: 0.25rem;
+    display: none;
   }
 }
