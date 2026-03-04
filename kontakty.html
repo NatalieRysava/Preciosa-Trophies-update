@@ -101,44 +101,48 @@
         Tým, který pro vás připraví dokonalou trofej...
       </p>
       <figure>
-        <!-- DESIGNERKY -->
-        <div data-aos-duration="1250" data-aos-delay="2000" data-aos-anchor-placement="top-bottom"
-          class="figure__box box--left-up">
-          <p class="heading--h3">Stáňa</p>
-          <p>Designerka</p>
+        <img data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="750"
+          src="img/spolecna-fotografie-atelier2.webp" alt="">
+
+        <!-- vlevo dole -->
+        <div data-aos="fade-right-fix" data-aos-duration="1250" data-aos-delay="2250"
+          data-aos-anchor-placement="top-bottom" class="figure__box box--left-down tooltip">
+          <p class="heading--h3">Michaela</p>
+          <p>Vedoucí obchodního oddělení</p>
+          <div class="tooltiptext">
+            <a href="mailto:michaela.dubska@preciosa.com">michaela.dubska@preciosa.com</a>
+          </div>
         </div>
 
-        <div data-aos-duration="1250" data-aos-delay="2250" data-aos-anchor-placement="top-bottom"
-          class="figure__box box--left-down">
-          <p class="heading--h3">Jitka</p>
-          <p>Designerka</p>
+        <!-- vlevo nahoře -->
+        <div data-aos="fade-right-fix" data-aos-duration="1250" data-aos-delay="2000"
+          data-aos-anchor-placement="top-bottom" class="figure__box box--left-up tooltip">
+          <p class="heading--h3">Zuzana</p>
+          <p>Projektová manažerka</p>
+          <div class="tooltiptext">
+            <a href="mailto:zuzana.janovova@preciosa.com">zuzana.janovova@preciosa.com</a>
+          </div>
         </div>
 
-        <!-- MANAŽERKY / SALES -->
-        <div data-aos-duration="1250" data-aos-delay="2000" data-aos-anchor-placement="top-bottom"
-          class="figure__box box--right-up">
+        <!-- vpravo nahoře -->
+        <div data-aos="fade-left-fix" data-aos-duration="1250" data-aos-delay="2000"
+          data-aos-anchor-placement="top-bottom" class="figure__box box--right-up">
           <p class="heading--h3">Kristina</p>
           <p>Projektová manažerka</p>
         </div>
 
-        <div data-aos-duration="1250" data-aos-delay="2150" data-aos-anchor-placement="top-bottom"
-          class="figure__box box--right-middle tooltip">
-          <p class="heading--h3">Zuzana</p>
-          <p>Projektová manažerka</p>
-          <div class="tooltiptext">
-            <a href="mailto:trophies@preciosa.com">trophies@preciosa.com</a>
-            <a href="tel:+420739520225">+420 739 520 225</a>
-          </div>
+        <!-- vpravo uprostřed -->
+        <div data-aos="fade-left-fix" data-aos-duration="1250" data-aos-delay="2150"
+          data-aos-anchor-placement="top-bottom" class="figure__box box--right-middle">
+          <p class="heading--h3">Jitka</p>
+          <p>Designerka</p>
         </div>
 
-        <div data-aos-duration="1250" data-aos-delay="2300" data-aos-anchor-placement="top-bottom"
-          class="figure__box box--right-down tooltip">
-          <p class="heading--h3">Michaela</p>
-          <p>Vedoucí obchodního oddělení</p>
-          <div class="tooltiptext">
-            <a href="mailto:trophies@preciosa.com">trophies@preciosa.com</a>
-            <a href="tel:+420739520280">+420 739 520 280</a>
-          </div>
+        <!-- vpravo dole -->
+        <div data-aos="fade-left-fix" data-aos-duration="1250" data-aos-delay="2300"
+          data-aos-anchor-placement="top-bottom" class="figure__box box--right-down">
+          <p class="heading--h3">Stáňa</p>
+          <p>Designerka</p>
         </div>
       </figure>
     </section>
@@ -263,6 +267,9 @@
   <script src="hamburger.js"></script>
   <script>
     document.querySelectorAll(".tooltip").forEach(function (element) {
+
+      if (window.matchMedia("(max-width: 1170px)").matches) return;
+
       element.addEventListener("mouseenter", function () {
         element.classList.add("padding-adjusted");
       });
@@ -270,6 +277,7 @@
       element.addEventListener("mouseleave", function () {
         element.classList.remove("padding-adjusted");
       });
+
     });
   </script>
 

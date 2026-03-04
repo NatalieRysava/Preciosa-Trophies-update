@@ -538,6 +538,36 @@ header::before {
   transition: opacity 0.5s;
 }
 
+/* Position boxes */
+
+.box--left-up,
+.box--right-up,
+.box--right-down,
+.box--left-down,
+.box--right-middle {
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.box--left-up {
+  top: 8rem;
+}
+.box--right-up {
+  top: 15rem;
+}
+.box--right-down {
+  top: 25rem;
+}
+
+.box--right-middle {
+  top: 20rem;
+}
+
+.box--left-down {
+  top: 1rem;
+}
+
 /* ==========================================================================
    FIGURES AND IMAGES
    ========================================================================== */
@@ -605,7 +635,8 @@ figure:has(.box--text),
 }
 
 .figure__box {
-  width: 12rem;
+  position: absolute;
+  width: 15rem;
 }
 
 .figure__box p {
@@ -796,14 +827,11 @@ form input[type="checkbox"] {
 
 .section--contact figure {
   position: relative;
-  display: flex;
-  justify-content: center;
-  gap: 2vw;
   overflow: hidden;
   height: auto;
   width: 100%;
-  padding-top: 2rem;
   margin: 0 auto;
+  padding-top: 30rem;
   transition: 0.5s;
   transition-delay: 0.5s;
 }
@@ -825,11 +853,6 @@ form input[type="checkbox"] {
 
 .section--contact > p {
   padding-inline: 3rem;
-}
-
-.section--contact figure:has(.padding-adjusted) {
-  padding-bottom: 2rem;
-  transition: 1s;
 }
 
 /* Offer Section */
@@ -1461,7 +1484,11 @@ p + .box-duvody {
 
 .tooltip .tooltiptext {
   visibility: hidden;
+  position: absolute;
   z-index: 1;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 0;
   transition:
     opacity 1s,
@@ -1806,6 +1833,10 @@ p + .box-duvody {
     height: 16rem;
   }
 
+  .section--contact figure {
+    padding-top: 19rem;
+  }
+
   .text--absolute {
     top: 16rem;
   }
@@ -2007,12 +2038,76 @@ p + .box-duvody {
 }
 
 @media screen and (min-width: 1170px) {
+  .box--left-up,
+  .box--right-up,
+  .box--right-down,
+  .box--left-down,
+  .box--right-middle {
+    left: auto;
+    transform: translateX(0);
+  }
+
+  .box--left-down {
+    left: -4rem;
+    top: 6rem;
+    text-align: right;
+  }
+
+  .box--left-up {
+    left: -7rem;
+    top: 15rem;
+    text-align: right;
+  }
+
+  .box--right-down {
+    right: -24rem;
+    top: 19rem;
+    text-align: left;
+  }
+
+  .box--right-middle {
+    right: -20rem;
+    top: 10rem;
+    text-align: left;
+  }
+
+  .box--right-up {
+    right: -10rem;
+    top: 3rem;
+    text-align: left;
+  }
+
+  .section--contact-en .box--left-down {
+    left: -3rem;
+  }
+
+  .section--contact-en .box--left-up {
+    left: 0;
+  }
+
+  .section--contact-en .box--right-down {
+    right: -9rem;
+  }
+
+  .section--contact-en .box--right-middle {
+    right: -6rem;
+  }
+
+  .section--contact-en .box--right-up {
+    right: 2rem;
+  }
+
+  figure:has(.box--left-down) {
+    padding-top: 0;
+  }
+
   .tooltip .tooltiptext {
     left: auto;
     transform: translateX(0);
   }
 
   .section--contact figure {
+    height: calc(75vh);
     width: max-content;
     overflow: visible;
   }
@@ -2324,10 +2419,14 @@ p + .box-duvody {
   .filter-btn {
     white-space: nowrap;
   }
+}
 
-  .section--contact figure {
-    gap: 4vw;
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 1170px) {
+  .tooltip .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    position: static; /* aby byl pod jménem */
+    transform: none;
+    margin-top: 0.25rem;
   }
 }
