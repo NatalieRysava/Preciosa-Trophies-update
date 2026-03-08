@@ -551,21 +551,21 @@ header::before {
 }
 
 .box--left-up {
-  top: 6rem;
+  top: 1rem;
 }
 .box--right-up {
-  top: 11rem;
+  top: 17rem;
 }
 .box--right-down {
-  top: 21rem;
+  top: 27rem;
 }
 
 .box--right-middle {
-  top: 16rem;
+  top: 22rem;
 }
 
 .box--left-down {
-  top: 1rem;
+  top: 9rem;
 }
 
 /* ==========================================================================
@@ -831,7 +831,7 @@ form input[type="checkbox"] {
   height: auto;
   width: 100%;
   margin: 0 auto;
-  padding-top: 25rem;
+  padding-top: 31rem;
   transition: 0.5s;
   transition-delay: 0.5s;
 }
@@ -1486,7 +1486,7 @@ p + .box-duvody {
   visibility: hidden;
   position: absolute;
   z-index: 1;
-  bottom: -2rem;
+  bottom: -4rem;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -2422,11 +2422,8 @@ p + .box-duvody {
 }
 
 @media (max-width: 1170px) {
-  .tooltip {
-    cursor: pointer;
-  }
-
-  .tooltip .tooltiptext {
-    display: none;
+  .tooltip.tooltip--visible .tooltiptext {
+    opacity: 1;
+    visibility: visible;
   }
 }
