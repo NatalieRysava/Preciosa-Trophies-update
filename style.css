@@ -2439,7 +2439,7 @@ p + .box-duvody {
   }
 }
 
-@media screen and (min-width: 1170px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media screen and (min-width: 1170px) and (max-width: 1280px) and (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 1.5) {
   .figure__box {
     font-size: 0.7rem;
   }
@@ -2454,7 +2454,7 @@ p + .box-duvody {
   }
 }
 
-@media screen and (min-width: 1170px) and (resolution: 144dpi) {
+@media screen and (min-width: 1170px) and (max-width: 1280px) and (min-resolution: 144dpi) and (max-resolution: 144dpi) {
   .figure__box {
     font-size: 0.7rem;
   }
