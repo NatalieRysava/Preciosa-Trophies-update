@@ -2438,3 +2438,33 @@ p + .box-duvody {
     visibility: visible;
   }
 }
+
+@media screen and (min-width: 1170px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .figure__box {
+    font-size: 0.7rem;
+  }
+
+  .figure__box .heading--h3 {
+    font-size: 0.85rem;
+  }
+
+  .tooltip .tooltiptext {
+    left: 30%;
+    bottom: -2.5rem;
+  }
+}
+
+@media screen and (min-width: 1170px) and (resolution: 144dpi) {
+  .figure__box {
+    font-size: 0.7rem;
+  }
+
+  .figure__box .heading--h3 {
+    font-size: 0.85rem;
+  }
+
+  .tooltip .tooltiptext {
+    left: 30%;
+    bottom: -2.5rem;
+  }
+}
