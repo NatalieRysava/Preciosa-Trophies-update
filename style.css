@@ -2051,7 +2051,7 @@ p + .box-duvody {
   .box--left-down {
     /*left: -4rem;
     top: 6rem;*/
-    margin-left: -57%;
+    margin-left: -57.5%;
     margin-top: -23%;
     text-align: right;
   }
@@ -2059,7 +2059,7 @@ p + .box-duvody {
   .box--left-up {
     /*left: -7rem;
     top: 15rem;*/
-    margin-left: -63%;
+    margin-left: -63.5%;
     margin-top: -7%;
     text-align: right;
   }
@@ -2067,7 +2067,7 @@ p + .box-duvody {
   .box--right-down {
     /*right: -24rem;
     top: 19rem;*/
-    margin-left: 66%;
+    margin-left: 66.5%;
     margin-top: -1%;
     text-align: left;
   }
@@ -2075,7 +2075,7 @@ p + .box-duvody {
   .box--right-middle {
     /*right: -20rem;
     top: 10rem;*/
-    margin-left: 59%;
+    margin-left: 59.5%;
     margin-top: -15%;
     text-align: left;
   }
@@ -2083,7 +2083,7 @@ p + .box-duvody {
   .box--right-up {
     /*right: -10rem;
     top: 3rem;*/
-    margin-left: 41%;
+    margin-left: 42.5%;
     margin-top: -28%;
     text-align: left;
   }
