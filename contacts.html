@@ -245,6 +245,15 @@
   <script src="./aos.js"></script>
   <script>
     AOS.init();
+
+    const isMobile = window.matchMedia("(max-width: 1170px)").matches;
+    if (isMobile) {
+      document.querySelectorAll("[data-aos-anchor-placement]").forEach(function (el) {
+        el.setAttribute("data-aos-anchor", "#intro");
+        el.removeAttribute("data-aos-anchor-placement");
+      });
+      AOS.refreshHard();
+    }
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {

@@ -101,7 +101,7 @@
         Tým, který pro vás připraví dokonalou trofej...
       </p>
       <figure>
-        <img data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="750" <img
+        <img data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-delay="750"
           src="img/spolecna-fotografie-atelier2.webp" alt="Tým Preciosa Trophies">
 
         <!-- vlevo dole -->
@@ -244,6 +244,15 @@
   <script src="./aos.js"></script>
   <script>
     AOS.init();
+
+    const isMobile = window.matchMedia("(max-width: 1170px)").matches;
+    if (isMobile) {
+      document.querySelectorAll("[data-aos-anchor-placement]").forEach(function (el) {
+        el.setAttribute("data-aos-anchor", "#intro");
+        el.removeAttribute("data-aos-anchor-placement");
+      });
+      AOS.refreshHard();
+    }
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
