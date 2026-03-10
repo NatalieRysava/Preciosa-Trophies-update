@@ -2452,6 +2452,26 @@ p + .box-duvody {
     left: 30%;
     bottom: -2.5rem;
   }
+
+  .box--left-down {
+    margin-left: -59.5%;
+  }
+
+  .box--left-up {
+    margin-left: -65.5%;
+  }
+
+  .box--right-down {
+    margin-left: 68.5%;
+  }
+
+  .box--right-middle {
+    margin-left: 61.5%;
+  }
+
+  .box--right-up {
+    margin-left: 44.5%;
+  }
 }
 
 @media screen and (min-width: 1170px) and (max-width: 1280px) and (min-resolution: 144dpi) and (max-resolution: 144dpi) {
@@ -2466,5 +2486,25 @@ p + .box-duvody {
   .tooltip .tooltiptext {
     left: 30%;
     bottom: -2.5rem;
+  }
+
+  .box--left-down {
+    margin-left: -59.5%;
+  }
+
+  .box--left-up {
+    margin-left: -65.5%;
+  }
+
+  .box--right-down {
+    margin-left: 68.5%;
+  }
+
+  .box--right-middle {
+    margin-left: 61.5%;
+  }
+
+  .box--right-up {
+    margin-left: 44.5%;
   }
 }
